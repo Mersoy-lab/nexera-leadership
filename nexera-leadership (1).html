@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexera Leadership</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black:#0a0a0a; --navy:#1a2b5e; --navy-mid:#243470;
+  --blue:#2d5be3; --blue-light:#4a7fd4; --blue-pale:#eef2fb;
+  --burg:#7a1f3d; --burg-mid:#9b2649; --burg-light:#c0395f; --burg-pale:#faeef2;
+  --steel:#3a5a8c; --slate:#4a5568; --muted:#6b7a8d; --border:#e2e6ed;
+  --white:#ffffff; --off-white:#f8f9fc; --cream:#f4f6fa;
+  --green:#1a7a4a; --amber:#b06a00; --red:#a01a2a;
+  --text:#0f1923; --text-2:#374151;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;font-size:15px;line-height:1.6}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:.85rem 3rem;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:2px solid var(--navy)}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.logo-mark{width:36px;height:36px;background:var(--navy);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:#fff;letter-spacing:-.02em}
+.logo-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--navy);letter-spacing:.02em}
+.logo-name span{color:var(--burg)}
+nav ul{display:flex;list-style:none;gap:0;align-items:center}
+nav ul li{position:relative}
+nav ul li a{display:block;text-decoration:none;color:var(--slate);font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;padding:.5rem .9rem}
+nav ul li a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy)!important;color:#fff!important;padding:.44rem 1.1rem!important;border-radius:4px;font-weight:700!important;margin-left:.4rem;transition:background .2s!important}
+.nav-cta:hover{background:var(--burg)!important;color:#fff!important}
+.nav-drop{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1px solid var(--border);border-radius:10px;padding:.4rem 0;min-width:210px;box-shadow:0 10px 40px rgba(0,0,0,.1);z-index:600}
+.nav-drop li a{font-size:.71rem;color:var(--slate);padding:.55rem 1.1rem;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;transition:all .15s}
+.nav-drop li a:hover{color:var(--navy);background:var(--blue-pale);padding-left:1.4rem}
+.nav-drop.open{display:block}
+@keyframes dropIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+.has-drop::after{content:'▾';margin-left:.25rem;font-size:.6rem;opacity:.5}
+
+/* ── UTILS ── */
+section{padding:5.5rem 3rem}
+.inner{max-width:1160px;margin:0 auto}
+.inner-sm{max-width:900px;margin:0 auto}
+.sec-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--burg);margin-bottom:.6rem}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.8vw,2.9rem);font-weight:700;line-height:1.12;margin-bottom:1rem;color:var(--navy)}
+.sec-title em{font-style:italic;color:var(--burg)}
+.sec-sub{color:var(--text-2);font-size:.93rem;line-height:1.75;max-width:640px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.btn{padding:.82rem 1.8rem;border-radius:5px;border:none;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;letter-spacing:.04em;transition:all .25s}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--burg);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+
+/* ── CALLOUT PHRASE BOXES ── */
+.phrase-box{background:var(--navy);color:#fff;border-radius:10px;padding:1.4rem 2rem;margin:2rem 0;display:flex;align-items:center;gap:1.2rem}
+.phrase-box.burg{background:var(--burg)}
+.phrase-box.light{background:var(--blue-pale);color:var(--navy)}
+.phrase-box.border{background:#fff;border:2px solid var(--navy);color:var(--navy)}
+.phrase-box .pq{font-family:'Playfair Display',serif;font-size:1.12rem;font-weight:700;line-height:1.4;flex:1}
+.phrase-box .pq-mark{font-size:2rem;opacity:.35;flex-shrink:0;font-family:'Playfair Display',serif}
+
+/* ── KEY DISTINCTION STRIP ── */
+.kd-strip{background:var(--navy);padding:2.5rem 3rem}
+.kd-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1)}
+.kd-item{background:var(--navy);padding:1.5rem 1.6rem;text-align:center}
+.kd-item:hover{background:var(--navy-mid)}
+.kd-num{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:rgba(255,255,255,.35);margin-bottom:.4rem}
+.kd-stat{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:#fff;line-height:1;margin-bottom:.25rem}
+.kd-stat span{color:var(--burg-light)}
+.kd-lbl{font-size:.73rem;color:rgba(255,255,255,.6);line-height:1.45}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:flex;align-items:center;padding:8rem 3rem 4rem;position:relative;overflow:hidden;background:var(--white)}
+.hero-left{position:relative;z-index:2;max-width:640px}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid var(--navy);border-radius:100px;padding:.3rem 1rem;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:1.6rem}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--burg);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+#hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:900;line-height:1.06;letter-spacing:-.02em;margin-bottom:1.2rem;color:var(--navy)}
+#hero h1 em{font-style:italic;color:var(--burg)}
+.hero-sub{font-size:.96rem;line-height:1.75;color:var(--text-2);max-width:520px;margin-bottom:1.8rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-right{position:absolute;right:3rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:1rem;z-index:2}
+.stat-card{background:var(--navy);border-radius:12px;padding:1.2rem 1.6rem;min-width:165px;color:#fff}
+.stat-card.burg{background:var(--burg)}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:700;color:#fff;line-height:1;margin-bottom:.25rem}
+.stat-lbl{font-size:.64rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.1em}
+.hero-decor{position:absolute;right:0;top:0;width:42%;height:100%;background:var(--cream);z-index:0;clip-path:polygon(12% 0,100% 0,100% 100%,0 100%)}
+
+/* ── MISSION / VISION ── */
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2.5rem 0}
+.mv-card{border-radius:14px;padding:2.2rem}
+.mv-card.mission{background:var(--navy);color:#fff}
+.mv-card.vision{background:var(--burg);color:#fff}
+.mv-tag{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.6rem}
+.mv-headline{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;line-height:1.25;color:#fff;margin-bottom:.7rem}
+.mv-body{font-size:.88rem;color:rgba(255,255,255,.78);line-height:1.7}
+.mv-motto{display:inline-block;margin-top:1rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .85rem;border-radius:100px;background:rgba(255,255,255,.15);color:#fff}
+
+/* ── WHAT WE SOLVE ── */
+.gap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.5rem}
+.gap-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem;border-top:3px solid var(--navy)}
+.gap-icon{font-size:1.4rem;margin-bottom:.7rem}
+.gap-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.gap-body{font-size:.82rem;color:var(--text-2);line-height:1.65}
+
+/* ── COMPARISON TABLE ── */
+.compare-table{border:1.5px solid var(--border);border-radius:14px;overflow:hidden;margin-top:2rem}
+.compare-head{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;background:var(--navy);border-bottom:1px solid var(--border)}
+.compare-head div{padding:.75rem 1.2rem;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.compare-head div:first-child{color:#fff}
+.compare-row{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;border-bottom:1px solid var(--border)}
+.compare-row:last-child{border-bottom:none}
+.compare-row:nth-child(even){background:var(--off-white)}
+.compare-cell{padding:.72rem 1.2rem;font-size:.79rem;color:var(--text-2);display:flex;align-items:center}
+.compare-cell.feature{color:var(--text);font-weight:600}
+.check-yes{color:var(--green);font-weight:700;font-size:.9rem}
+.check-partial{color:var(--amber);font-size:.8rem}
+.check-no{color:#ccc;font-size:.85rem}
+
+/* ── VALUES / MATURITY ── */
+.maturity-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:14px;overflow:hidden;margin-top:2.5rem}
+.maturity-block{background:var(--white);padding:1.3rem;text-align:center}
+.maturity-block.active{background:var(--navy);color:#fff}
+.maturity-num{font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.maturity-block.active .maturity-num{color:rgba(255,255,255,.5)}
+.maturity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:.3rem;color:var(--navy)}
+.maturity-block.active .maturity-title{color:#fff}
+.maturity-desc{font-size:.74rem;color:var(--muted);line-height:1.5}
+.maturity-block.active .maturity-desc{color:rgba(255,255,255,.7)}
+.maturity-nexera{font-size:.66rem;font-weight:700;margin-top:.5rem;color:var(--burg)}
+.maturity-block.active .maturity-nexera{color:rgba(255,255,255,.85)}
+
+/* ── DASHBOARD ── */
+.dash-outer{background:var(--off-white);border:1.5px solid var(--border);border-radius:16px;padding:1.8rem;margin-top:2rem}
+.dash-tabs{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.dtab{padding:.5rem 1.1rem;border-radius:6px;font-size:.74rem;font-weight:700;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--slate);transition:all .2s;letter-spacing:.03em}
+.dtab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.dpanel{display:none}
+.dpanel.active{display:block}
+.b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-bottom:.9rem}
+.b-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:.9rem;border-top:3px solid var(--navy)}
+.b-card.warn{border-top-color:var(--amber)}
+.b-card.risk{border-top-color:var(--red)}
+.b-label{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.b-title{font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
+.b-status{display:inline-block;font-size:.6rem;font-weight:700;padding:.13rem .45rem;border-radius:4px;margin-bottom:.4rem}
+.s-ok{background:#d1fae5;color:var(--green)}
+.s-warn{background:#fef3c7;color:var(--amber)}
+.s-risk{background:#fee2e2;color:var(--red)}
+.b-data{font-size:.74rem;color:var(--text-2);line-height:1.6}
+.b-source{font-size:.65rem;color:var(--muted);font-style:italic;margin-top:.3rem}
+.dash-summary{background:var(--navy);color:#fff;border-radius:10px;padding:.9rem 1.2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:.9rem}
+.dash-sum-label{font-size:.75rem;font-weight:700;color:rgba(255,255,255,.8)}
+.dash-sum-nums{display:flex;gap:1.5rem}
+.dash-num{text-align:center}
+.dash-num-val{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#fff;line-height:1}
+.dash-num-lbl{font-size:.58rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em}
+.dash-num-val.ok{color:#6ee7b7}
+.dash-num-val.warn{color:#fcd34d}
+.dash-num-val.risk{color:#fca5a5}
+
+/* 360 panel */
+.rpt-score-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-bottom:1.2rem}
+.rpt-score{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1rem;text-align:center}
+.rpt-score-val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--navy);line-height:1;margin-bottom:.2rem}
+.rpt-score-lbl{font-size:.64rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.rpt-bars{display:flex;flex-direction:column;gap:.5rem;background:#fff;border:1px solid var(--border);border-radius:10px;padding:1rem}
+.rdb-row{display:flex;align-items:center;gap:.8rem}
+.rdb-nm{font-size:.78rem;color:var(--text-2);min-width:160px}
+.rdb-tr{flex:1;height:7px;background:var(--cream);border-radius:4px;overflow:hidden}
+.rdb-fi{height:100%;border-radius:4px;background:var(--navy);transition:width 1s ease}
+.rdb-vl{font-size:.76rem;font-weight:700;color:var(--navy);min-width:28px;text-align:right}
+.insight-box{background:var(--burg-pale);border:1px solid rgba(122,31,61,.15);border-radius:10px;padding:1rem 1.2rem;margin-top:.9rem;font-size:.82rem;color:var(--text-2);line-height:1.65;border-left:3px solid var(--burg)}
+
+/* culture survey panel */
+.nps-row{display:flex;gap:1.2rem;flex-wrap:wrap;margin-bottom:1rem}
+.nps-block{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1rem 1.5rem;text-align:center;min-width:110px}
+.nps-big{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--navy);line-height:1}
+.nps-lbl{font-size:.64rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem}
+.domain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;background:#fff;border:1px solid var(--border);border-radius:10px;padding:1rem}
+.dom-item{text-align:center}
+.dom-val{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy)}
+.dom-lbl{font-size:.65rem;color:var(--muted);margin-top:.1rem}
+.dom-chg{font-size:.64rem;font-weight:700;margin-top:.1rem}
+.chg-up{color:var(--green)} .chg-dn{color:var(--red)} .chg-flat{color:var(--muted)}
+.campus-tabs{display:flex;gap:.4rem;margin-bottom:.8rem}
+.ctab{padding:.3rem .8rem;border-radius:20px;font-size:.72rem;font-weight:700;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--slate);transition:all .15s}
+.ctab.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* self/others narrative panel */
+.narr-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.narr-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.2rem}
+.narr-label{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem}
+.narr-label.self{color:var(--blue)}
+.narr-label.others{color:var(--burg)}
+.narr-item{font-size:.8rem;color:var(--text-2);line-height:1.55;padding:.45rem 0;border-bottom:1px solid var(--border);display:flex;gap:.5rem;align-items:flex-start}
+.narr-item:last-child{border-bottom:none}
+.narr-item::before{content:'→';color:var(--navy);flex-shrink:0;font-size:.72rem;margin-top:.1rem}
+
+/* ── ASSESSMENTS ── */
+.assess-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:2rem 0}
+.assess-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.6rem;transition:all .25s;position:relative;overflow:hidden}
+.assess-card:hover{border-color:var(--navy);box-shadow:0 8px 28px rgba(26,43,94,.1);transform:translateY(-3px)}
+.assess-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.assess-card.hogan::before{background:var(--navy)}
+.assess-card.disc::before{background:var(--burg)}
+.assess-card.clifton::before{background:var(--blue)}
+.assess-card.s360::before{background:var(--steel)}
+.assess-logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:.25rem}
+.assess-card.hogan .assess-logo{color:var(--navy)}
+.assess-card.disc .assess-logo{color:var(--burg)}
+.assess-card.clifton .assess-logo{color:var(--blue)}
+.assess-card.s360 .assess-logo{color:var(--steel)}
+.assess-provider{font-size:.65rem;color:var(--muted);margin-bottom:.75rem;font-weight:600}
+.assess-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.assess-card p{font-size:.81rem;color:var(--text-2);line-height:1.62;margin-bottom:.9rem}
+.assess-list{list-style:none;display:flex;flex-direction:column;gap:.3rem}
+.assess-list li{font-size:.76rem;color:var(--text-2);padding-left:1rem;position:relative;line-height:1.45}
+.assess-list li::before{content:'→';position:absolute;left:0;color:var(--navy);font-size:.68rem}
+.assess-flow{background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:1.8rem 2rem;margin-top:1.5rem}
+.assess-flow h4{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:1.2rem}
+.af-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.af-step{text-align:center;position:relative}
+.af-step:not(:last-child)::after{content:'→';position:absolute;right:-10px;top:18px;color:var(--muted);font-size:.8rem}
+.af-num{width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:.82rem;display:flex;align-items:center;justify-content:center;margin:0 auto .6rem}
+.af-step h5{font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.af-step p{font-size:.73rem;color:var(--text-2);line-height:1.5}
+
+/* ── AI TABLE ── */
+.ai-section{background:var(--navy);padding:5.5rem 3rem}
+.ai-inner{max-width:1160px;margin:0 auto}
+.ai-table{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;margin-top:2rem;background:#fff}
+.ai-table thead tr{background:var(--burg)}
+.ai-table thead th{padding:1rem 1.2rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;text-align:left}
+.ai-table tbody tr{border-bottom:1px solid var(--border);transition:background .15s}
+.ai-table tbody tr:last-child{border-bottom:none}
+.ai-table tbody tr:hover{background:var(--blue-pale)}
+.ai-table td{padding:.9rem 1.2rem;font-size:.82rem;color:var(--text-2);vertical-align:top}
+.ai-table td:first-child{font-weight:700;color:var(--navy);min-width:170px}
+.ai-table td:nth-child(2){color:var(--slate)}
+.ai-chip{display:inline-block;font-size:.62rem;font-weight:700;padding:.15rem .5rem;border-radius:3px;background:rgba(26,43,94,.08);color:var(--navy);margin:.05rem}
+.ai-outcome{display:flex;align-items:center;gap:.4rem;font-weight:600;color:var(--green)}
+.ai-outcome::before{content:'✓';color:var(--green)}
+.ai-phrase{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:1.4rem 2rem;margin-top:2rem;display:flex;align-items:center;gap:1.2rem}
+.ai-phrase-q{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.4;flex:1}
+.ai-phrase-mark{font-size:2.5rem;color:rgba(255,255,255,.2);font-family:'Playfair Display',serif}
+
+/* ── 90 DAYS ── */
+.days-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:14px;overflow:hidden;margin-top:2rem}
+.days-cell{background:#fff;padding:1.5rem;position:relative}
+.days-week{position:absolute;top:.7rem;right:.8rem;font-size:.58rem;color:var(--muted);font-family:'JetBrains Mono',monospace}
+.days-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1;margin-bottom:.15rem}
+.days-phase{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem}
+.days-steps{display:flex;flex-direction:column;gap:.35rem}
+.days-step{font-size:.76rem;color:var(--text-2);line-height:1.4;display:flex;gap:.35rem}
+.days-step::before{content:'→';color:var(--navy);flex-shrink:0;font-size:.68rem;margin-top:.08rem}
+.days-deliver{margin-top:.9rem;font-size:.72rem;font-weight:700;padding:.4rem .75rem;border-radius:6px;text-align:center;border:1px solid var(--border)}
+/* BOT callout */
+.bot-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--burg);color:#fff;padding:.5rem 1.1rem;border-radius:6px;font-size:.76rem;font-weight:700;letter-spacing:.05em;margin-bottom:1.2rem}
+.bot-badge::before{content:'🤖';font-size:.9rem}
+
+/* ── SUCCESSION MAP ── */
+.succ-map-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.8rem}
+.succ-card{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1.3rem;transition:all .25s}
+.succ-card:hover{border-color:var(--navy);transform:translateY(-2px)}
+.succ-role-label{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.2rem;color:var(--muted)}
+.succ-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:.5rem;color:var(--navy)}
+.succ-bar-track{height:6px;background:var(--cream);border-radius:3px;overflow:hidden;margin-bottom:.25rem}
+.succ-bar-fill{height:100%;border-radius:3px;transition:width 1.3s ease .3s}
+.succ-bar-labels{display:flex;justify-content:space-between;font-size:.63rem;color:var(--muted);margin-bottom:.55rem}
+.succ-badge{display:inline-block;font-size:.6rem;font-weight:700;padding:.13rem .48rem;border-radius:3px;letter-spacing:.04em}
+.s-ready{background:#d1fae5;color:var(--green)} .s-1yr{background:#fef3c7;color:var(--amber)}
+.s-2yr{background:#ede9fe;color:#5b21b6} .s-dev{background:#fee2e2;color:var(--red)}
+.succ-note{font-size:.72rem;color:var(--text-2);margin-top:.45rem;line-height:1.5}
+
+/* ── BOARD TIERS ── */
+.board-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.board-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.6rem;transition:all .25s;position:relative}
+.board-card:hover{border-color:var(--navy);box-shadow:0 6px 24px rgba(26,43,94,.08)}
+.board-card.featured{border-color:var(--navy);background:var(--blue-pale)}
+.board-card.featured::before{content:'MOST REQUESTED';position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-size:.52rem;font-weight:700;letter-spacing:.1em;padding:.2rem .8rem;border-radius:0 0 6px 6px;white-space:nowrap}
+.tier-label{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--burg);margin-bottom:.3rem}
+.tier-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:.25rem}
+.tier-sub{font-size:.72rem;color:var(--muted);margin-bottom:1rem;padding-bottom:.8rem;border-bottom:1px solid var(--border)}
+.tier-items{display:flex;flex-direction:column;gap:.42rem;margin-bottom:1rem}
+.tier-item{font-size:.78rem;color:var(--text-2);display:flex;gap:.45rem;line-height:1.4}
+.tier-item::before{content:'✓';color:var(--green);flex-shrink:0;font-weight:700;font-size:.72rem}
+.tier-buyer{font-size:.68rem;color:var(--muted);font-style:italic}
+
+/* ── WHO WE SERVE ── */
+.serve-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.serve-card{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1.4rem;transition:all .25s}
+.serve-card:hover{border-color:var(--navy);transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,43,94,.08)}
+.serve-avatar{font-size:1.9rem;margin-bottom:.7rem}
+.serve-role{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--burg);margin-bottom:.2rem}
+.serve-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.1rem}
+.serve-org{font-size:.68rem;color:var(--muted);margin-bottom:.65rem}
+.serve-quote{font-size:.78rem;color:var(--text-2);font-style:italic;line-height:1.55;margin-bottom:.7rem}
+.serve-tags{display:flex;flex-wrap:wrap;gap:.28rem}
+.serve-tag{font-size:.59rem;padding:.12rem .44rem;border-radius:3px;background:var(--blue-pale);color:var(--navy);font-weight:700}
+
+/* ── PLATFORM PHASES ── */
+.phase-list{display:flex;flex-direction:column;gap:.7rem;margin-top:2rem}
+.phase-item{background:#fff;border:1.5px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .25s;cursor:pointer}
+.phase-item.open{border-color:var(--navy)}
+.phase-hd{display:flex;align-items:center;gap:1rem;padding:1.2rem 1.4rem}
+.phase-num{font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:700;color:var(--navy);min-width:62px}
+.phase-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;flex:1;color:var(--navy)}
+.phase-chev{color:var(--muted);font-size:.8rem;transition:transform .3s}
+.phase-item.open .phase-chev{transform:rotate(180deg)}
+.phase-bd{display:none;padding:0 1.4rem 1.2rem;border-top:1px solid var(--border)}
+.phase-item.open .phase-bd{display:block}
+.phase-steps{list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-top:.8rem}
+.phase-steps li{font-size:.8rem;color:var(--text-2);padding-left:1rem;position:relative;line-height:1.5}
+.phase-steps li::before{content:'→';position:absolute;left:0;color:var(--burg);font-size:.7rem}
+
+/* ── ROI CALCULATOR ── */
+.roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.8rem 0}
+.roi-group{display:flex;flex-direction:column;gap:.4rem}
+.roi-label{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text)}
+.roi-sublabel{font-size:.66rem;color:var(--muted);margin-top:-.15rem}
+.roi-row{display:flex;align-items:center;gap:.9rem}
+.roi-slider{-webkit-appearance:none;appearance:none;flex:1;height:4px;border-radius:2px;background:var(--border);outline:none;cursor:pointer}
+.roi-slider::-webkit-slider-thumb{-webkit-appearance:none;width:17px;height:17px;border-radius:50%;background:var(--navy);cursor:pointer}
+.roi-val{font-family:'JetBrains Mono',monospace;font-size:.82rem;font-weight:700;color:var(--navy);min-width:52px;text-align:right}
+.roi-result-box{background:var(--navy);border-radius:14px;padding:1.8rem 2rem;color:#fff}
+.roi-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:1.3rem}
+.roi-metric{text-align:center}
+.roi-metric-val{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1;margin-bottom:.3rem;color:#fff}
+.roi-metric-val.t{color:#6ee7b7} .roi-metric-val.g{color:#fcd34d} .roi-metric-val.p{color:#c4b5fd}
+.roi-metric-label{font-size:.67rem;color:rgba(255,255,255,.55);line-height:1.45}
+.roi-insight{font-size:.8rem;color:rgba(255,255,255,.8);line-height:1.65;text-align:center;padding:.75rem 1.2rem;background:rgba(255,255,255,.07);border-radius:8px}
+
+/* ── KPI CARDS ── */
+.kpi-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.kpi-card-role{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1.4rem;transition:all .25s}
+.kpi-card-role:hover{border-color:var(--navy)}
+.kl-role{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--burg);margin-bottom:.15rem}
+.kl-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.2rem}
+.kl-focus{font-size:.73rem;color:var(--muted);margin-bottom:.6rem}
+.kl-narrative{font-size:.78rem;color:var(--text-2);font-style:italic;line-height:1.5;margin-bottom:.6rem;padding-left:.8rem;border-left:2px solid var(--burg)}
+.kl-kpi{font-size:.74rem;color:var(--text-2);background:var(--cream);border-radius:6px;padding:.6rem .8rem;margin-bottom:.6rem;line-height:1.5}
+.kl-starters{list-style:none;display:flex;flex-direction:column;gap:.3rem}
+.kl-starters li{font-size:.75rem;color:var(--text-2);padding-left:1rem;position:relative;line-height:1.4}
+.kl-starters li::before{content:'→';position:absolute;left:0;color:var(--navy);font-size:.68rem}
+
+/* ── CULTURE SURVEY ── */
+.cs-sep-tag{display:inline-block;background:var(--burg);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;border-radius:100px;margin-bottom:.7rem}
+.culture-features{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem}
+.cf-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.2rem}
+.cf-icon{font-size:1.3rem;margin-bottom:.5rem}
+.cf-card h4{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.35rem}
+.cf-card p{font-size:.78rem;color:var(--text-2);line-height:1.58}
+
+/* ── SAMPLE REPORT ── */
+.report-tabs{display:flex;gap:.5rem;margin-bottom:1.4rem;flex-wrap:wrap}
+.rtab{padding:.5rem 1.1rem;border-radius:6px;font-size:.76rem;font-weight:700;cursor:pointer;border:1.5px solid var(--border);background:#fff;color:var(--slate);transition:all .2s}
+.rtab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.rpanel{display:none}
+.rpanel.active{display:block}
+.report-doc{background:#fff;border:1.5px solid var(--border);border-radius:14px;overflow:hidden}
+.rdoc-head{background:var(--navy);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.rdoc-title{font-size:.78rem;font-weight:700;color:#fff;letter-spacing:.02em}
+.rdoc-badge{font-size:.58rem;font-weight:700;letter-spacing:.12em;background:var(--burg);color:#fff;padding:.2rem .7rem;border-radius:3px}
+.rdoc-body{padding:1.4rem}
+.rds{padding:.9rem 0;border-bottom:1px solid var(--border)}
+.rds:last-child{border-bottom:none;padding:0}
+.rds-lbl{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--burg);margin-bottom:.5rem}
+.rds-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.15rem}
+.rds-sub{font-size:.74rem;color:var(--muted)}
+.rds-scores{display:flex;gap:1.5rem;flex-wrap:wrap}
+.rsc{text-align:center}
+.rsc-n{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--navy);line-height:1}
+.rsc-l{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:.1rem}
+.rds-insight{font-size:.82rem;color:var(--text-2);line-height:1.68;background:var(--blue-pale);border-radius:8px;padding:.8rem 1rem;border-left:3px solid var(--navy)}
+
+/* ── CTA ── */
+#cta{background:var(--navy);color:#fff;text-align:center}
+#cta .sec-title{color:#fff}
+#cta .sec-title em{color:rgba(255,255,255,.65);font-style:italic}
+#cta .sec-sub{color:rgba(255,255,255,.7);margin:0 auto 2rem}
+.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-cta-white{background:#fff;color:var(--navy);font-weight:700}
+.btn-cta-white:hover{background:var(--burg);color:#fff}
+
+/* ── VALUES GRID ── */
+.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2rem}
+.val-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.6rem;transition:all .25s;position:relative}
+.val-card:hover{border-color:var(--navy)}
+.val-card-accent{position:absolute;top:0;left:0;bottom:0;width:4px;border-radius:14px 0 0 14px}
+.val-stage{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.3rem}
+.val-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.val-body{font-size:.8rem;color:var(--text-2);line-height:1.68;margin-bottom:.9rem}
+.val-how{font-size:.76rem;color:var(--text);background:var(--cream);border-radius:8px;padding:.7rem .9rem;border-left:2px solid var(--navy)}
+.val-how-label{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:.25rem}
+.val-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem}
+.val-tag{font-size:.6rem;padding:.1rem .45rem;border-radius:3px;font-weight:700;background:var(--blue-pale);color:var(--navy)}
+
+/* ── FOOTER ── */
+footer{background:var(--text);padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-copy{font-size:.75rem;color:rgba(255,255,255,.4)}
+.foot-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.foot-links a{font-size:.72rem;color:rgba(255,255,255,.45);text-decoration:none;text-transform:uppercase;letter-spacing:.07em;transition:color .2s}
+.foot-links a:hover{color:#fff}
+
+/* ── MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:900;align-items:center;justify-content:center;padding:1rem}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:16px;padding:2.2rem;max-width:500px;width:100%;max-height:90vh;overflow-y:auto}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem}
+.modal-head h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--navy)}
+.modal-close{background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--muted);line-height:1;padding:.2rem}
+.modal-sub{font-size:.83rem;color:var(--muted);margin-bottom:1.4rem;line-height:1.6}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text);margin-bottom:.35rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.7rem .9rem;border:1.5px solid var(--border);border-radius:6px;font-family:'Inter',sans-serif;font-size:.85rem;color:var(--text);outline:none;transition:border-color .2s;background:#fff}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--navy)}
+.modal-note{font-size:.72rem;color:var(--muted);text-align:center;margin-top:.75rem;font-style:italic}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:.8rem 1.5rem}
+  nav ul{display:none}
+  section{padding:4rem 1.5rem}
+  #hero{padding:6rem 1.5rem 3rem}
+  .hero-right,.hero-decor{display:none}
+  .mv-grid,.compare-head,.compare-row{grid-template-columns:1fr}
+  .diff-grid,.serve-grid,.assess-grid,.kpi-cards,.board-grid,.gap-grid,.values-grid{grid-template-columns:1fr}
+  .days-grid{grid-template-columns:1fr 1fr}
+  .ai-table{font-size:.78rem}
+  .kd-inner{grid-template-columns:repeat(2,1fr)}
+  .af-steps{grid-template-columns:1fr 1fr}
+  .succ-map-grid,.b-grid,.rpt-score-row{grid-template-columns:1fr 1fr}
+  .domain-grid{grid-template-columns:repeat(2,1fr)}
+  .narr-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="logo" href="#hero">
+    <div class="logo-mark">N</div>
+    <span class="logo-name">Nexera<span> Leadership</span></span>
+  </a>
+  <ul>
+    <li><a href="#" onclick="toggleDrop(event,this)" class="has-drop">Platform</a>
+      <ul class="nav-drop" id="platformDrop">
+        <li><a href="#" onclick="navGo(event,'mission')">Mission &amp; Vision</a></li>
+        <li><a href="#" onclick="navGo(event,'platform')">How It Works</a></li>
+        <li><a href="#" onclick="navGo(event,'ninety-days')">90-Day Protocol</a></li>
+        <li><a href="#" onclick="navGo(event,'succession')">Succession Map</a></li>
+        <li><a href="#" onclick="navGo(event,'kpi-model')">KPI Model</a></li>
+        <li><a href="#" onclick="navGo(event,'board-report')">Board Intelligence</a></li>
+      </ul>
+    </li>
+    <li><a href="#" onclick="toggleDrop(event,this)" class="has-drop">Assessments</a>
+      <ul class="nav-drop" id="assessDrop">
+        <li><a href="#" onclick="navGo(event,'assessments')">All Assessments</a></li>
+        <li><a href="#" onclick="navGo(event,'dashboard')">Dashboard &amp; Reports</a></li>
+        <li><a href="#" onclick="navGo(event,'culture-survey')">Culture Survey</a></li>
+      </ul>
+    </li>
+    <li><a href="#" onclick="navGo(event,'ai-section')">AI in Practice</a></li>
+    <li><a href="#" onclick="navGo(event,'who-we-serve')">Who We Serve</a></li>
+    <li><a href="#" onclick="navGo(event,'roi-calculator')">ROI</a></li>
+    <li><a href="#" onclick="navGo(event,'services')">Services</a></li>
+    <li><a href="#" onclick="navGo(event,'about')">About</a></li>
+    <li><a class="nav-cta" href="#" onclick="openModal();return false">Apply to Partner</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-decor"></div>
+  <div class="hero-left">
+    <div class="hero-badge">Charter School Leadership Intelligence</div>
+    <h1>Leadership Data.<br><em>Human Impact.</em><br>Renewal Confidence.</h1>
+    <p class="hero-sub">Nexera replaces gut-feel leadership development with a validated, data-driven system — so charter schools develop stronger leaders, build deeper benches, and walk into renewal reviews with evidence in hand.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="openModal()">Apply to Partner With Nexera</button>
+      <a class="btn btn-outline" href="#" onclick="navGo(event,'dashboard');return false">See the Dashboard</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-card"><div class="stat-num">360°</div><div class="stat-lbl">Multi-Rater Feedback</div></div>
+    <div class="stat-card burg"><div class="stat-num">90</div><div class="stat-lbl">Day Leader Protocol</div></div>
+    <div class="stat-card"><div class="stat-num">10</div><div class="stat-lbl">Renewal Benchmarks Tracked</div></div>
+    <div class="stat-card"><div class="stat-num">4</div><div class="stat-lbl">Validated Assessments</div></div>
+  </div>
+</section>
+
+<!-- ══ KEY DISTINCTIONS STRIP ══ -->
+<div class="kd-strip">
+  <div class="kd-inner">
+    <div class="kd-item">
+      <div class="kd-num">01</div>
+      <div class="kd-stat">Built <span>Inside</span></div>
+      <div class="kd-lbl">Created by charter school leaders — not consultants studying them from the outside</div>
+    </div>
+    <div class="kd-item">
+      <div class="kd-num">02</div>
+      <div class="kd-stat">AI <span>Automated</span></div>
+      <div class="kd-lbl">AI handles analysis so coaches spend time coaching — not compiling reports</div>
+    </div>
+    <div class="kd-item">
+      <div class="kd-num">03</div>
+      <div class="kd-stat">Renewal <span>Ready</span></div>
+      <div class="kd-lbl">Every KPI and data point maps to your authorizer's renewal benchmark framework</div>
+    </div>
+    <div class="kd-item">
+      <div class="kd-num">04</div>
+      <div class="kd-stat">Human <span>First</span></div>
+      <div class="kd-lbl">Technology automates the technical. Coaches deliver the human development that actually changes behavior</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MISSION / VISION ══ -->
+<section id="mission" style="background:var(--off-white)">
+  <div class="inner">
+    <div class="sec-label">Who We Are</div>
+    <h2 class="sec-title">Our <em>Mission &amp; Vision</em></h2>
+
+    <div class="mv-grid">
+      <div class="mv-card mission reveal">
+        <div class="mv-tag">Mission</div>
+        <div class="mv-headline">Develop leaders who build schools that last.</div>
+        <div class="mv-body">We equip charter school networks with the data, tools, and coaching infrastructure to develop every leader intentionally — connecting individual growth to organizational performance, values alignment, and authorizer renewal.</div>
+        <div class="mv-motto">Know Every Leader. Develop Every Leader.</div>
+      </div>
+      <div class="mv-card vision reveal">
+        <div class="mv-tag">Vision</div>
+        <div class="mv-headline">A sector where strong leadership is the standard — not the exception.</div>
+        <div class="mv-body">Charter schools where leaders are known and developed, values are lived not laminated, and renewal is a confirmation — not a crisis. Where leadership strength flows from the boardroom to every classroom, every day.</div>
+        <div class="mv-motto">Renewal Is a Confirmation, Not a Crisis.</div>
+      </div>
+    </div>
+
+    <div class="phrase-box reveal">
+      <div class="pq-mark">"</div>
+      <div class="pq">Strong leadership is your most cost-effective renewal strategy. Nexera builds the accountability infrastructure that protects what you've built.</div>
+    </div>
+
+    <!-- WHAT WE SOLVE -->
+    <div style="margin-top:2.5rem">
+      <div class="sec-label" style="color:var(--burg)">The Three Problems We Solve</div>
+      <div class="gap-grid">
+        <div class="gap-card reveal">
+          <div class="gap-icon">🪑</div>
+          <div class="gap-title">The Bench Is Empty</div>
+          <div class="gap-body">Most charter networks don't know who's ready to step up until a vacancy is already open. Nexera tracks succession readiness continuously — so the board is never surprised by a leadership gap.</div>
+        </div>
+        <div class="gap-card reveal" style="border-top-color:var(--burg)">
+          <div class="gap-icon">🌊</div>
+          <div class="gap-title">New Leaders Sink or Swim</div>
+          <div class="gap-body">Most principals are hired in July and on their own by October. Our 90-Day Protocol gives every new leader data, coaching, and a building baseline before their first real challenge arrives.</div>
+        </div>
+        <div class="gap-card reveal" style="border-top-color:var(--steel)">
+          <div class="gap-icon">⚠️</div>
+          <div class="gap-title">Renewal Comes as a Surprise</div>
+          <div class="gap-body">Most schools find out they have a renewal problem when the authorizer tells them. Nexera tracks all 10 benchmarks year-round — so you're always ready, never scrambling.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY QUALIFIED -->
+    <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.6rem 2rem;margin-top:1.5rem" class="reveal">
+      <div class="sec-label">Why We Are Qualified to Build This</div>
+      <p style="font-size:.88rem;color:var(--text-2);line-height:1.75;max-width:820px">Nexera was built by charter school leaders with over 50 combined years in public, private, and charter education. Between them, they have led charter renewals, scaled K–12 networks across multiple campuses, developed hundreds of teachers and leaders, and designed the data systems that now power Nexera's platform. <strong>This isn't a product built by outsiders studying charter schools — it was built from inside one.</strong></p>
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div style="margin-top:2.5rem">
+      <div class="sec-label">How Nexera Compares</div>
+      <div class="compare-table">
+        <div class="compare-head">
+          <div>Capability</div><div style="text-align:center">Nexera</div><div style="text-align:center">HR Consultant</div><div style="text-align:center">Generic Coach</div>
+        </div>
+        <div id="compare-rows"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DASHBOARD ══ -->
+<section id="dashboard">
+  <div class="inner">
+    <div class="sec-label">Live Dashboard</div>
+    <h2 class="sec-title">Your Whole Network.<br><em>One Clear View.</em></h2>
+    <p class="sec-sub">The Nexera dashboard gives principals, network leaders, and boards real-time visibility into what matters — from renewal benchmark status to individual 360° scores, culture data, and coaching narratives. All in one place, with clear accountability.</p>
+
+    <div class="phrase-box border reveal">
+      <div class="pq-mark">"</div>
+      <div class="pq" style="color:var(--navy)">One dashboard. Every leader. Every benchmark. Every coaching narrative. No more spreadsheets, no more guesswork — just clarity.</div>
+    </div>
+
+    <div class="dash-outer reveal">
+      <div class="dash-tabs">
+        <button class="dtab active" onclick="switchDash('renewal',this)">📊 Renewal Benchmarks</button>
+        <button class="dtab" onclick="switchDash('scores',this)">🎯 360° Scores</button>
+        <button class="dtab" onclick="switchDash('culture',this)">🏫 Culture Survey</button>
+        <button class="dtab" onclick="switchDash('narrative',this)">📝 Self vs. Others Narrative</button>
+      </div>
+
+      <!-- RENEWAL PANEL -->
+      <div class="dpanel active" id="dp-renewal">
+        <div style="font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--burg);margin-bottom:.7rem">Section 1 — Academic Success</div>
+        <div class="b-grid" style="grid-template-columns:repeat(3,1fr)">
+          <div class="b-card"><div class="b-label">B1 · Student Performance</div><div class="b-title">Academic Growth</div><span class="b-status s-ok">✓ On Track</span><div class="b-data">Proficiency trend ↑ 3pts · SGP: 54th</div><div class="b-source">Source: State data</div></div>
+          <div class="b-card"><div class="b-label">B2 · Teaching &amp; Learning</div><div class="b-title">Instructional Quality</div><span class="b-status s-ok">✓ On Track</span><div class="b-data">Obs cycles: 92% complete · PD fidelity: 87%</div><div class="b-source">Source: Platform data</div></div>
+          <div class="b-card"><div class="b-label">B3 · Culture &amp; Climate</div><div class="b-title">Culture Health</div><span class="b-status s-ok">✓ On Track</span><div class="b-data">eNPS: +54 · Belonging: 67%</div><div class="b-source">Source: Culture survey</div></div>
+        </div>
+        <div style="font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:.7rem;margin-top:1rem">Section 2 — Organizational Soundness</div>
+        <div class="b-grid" style="grid-template-columns:repeat(4,1fr)">
+          <div class="b-card"><div class="b-label">B4 · Financial Condition</div><div class="b-title">Clean Audit</div><span class="b-status s-ok">✓ On Track</span><div class="b-data">Debt coverage: 1.14× · Weaknesses: 0</div><div class="b-source">Source: Annual audit</div></div>
+          <div class="b-card"><div class="b-label">B5 · Financial Mgmt</div><div class="b-title">Budget Adherence</div><span class="b-status s-ok">✓ On Track</span><div class="b-data">Budget variance: 3.2% · Repeat findings: 0</div><div class="b-source">Source: Audit + ticketing</div></div>
+          <div class="b-card"><div class="b-label">B6 · Board Governance</div><div class="b-title">Oversight Quality</div><span class="b-status s-ok">✓ On Track</span><div class="b-data">Quorum: 83% · CEO 360°: 4.1/5</div><div class="b-source">Source: Board records + 360°</div></div>
+          <div class="b-card warn"><div class="b-label">B7 · Org Capacity</div><div class="b-title">Staffing &amp; Systems</div><span class="b-status s-warn">○ Attention</span><div class="b-data">Retention: 88% ✓ · Vacancies &gt;45d: 3 open</div><div class="b-source">Source: HR + ticketing</div></div>
+        </div>
+        <div style="font-size:.65rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--burg);margin-bottom:.7rem;margin-top:1rem">Section 3 — Faithfulness to Charter</div>
+        <div class="b-grid" style="grid-template-columns:repeat(3,1fr)">
+          <div class="b-card"><div class="b-label">B8 · Mission Fidelity</div><div class="b-title">Charter Alignment</div><span class="b-status s-ok">✓ On Track</span><div class="b-data">Purpose &amp; Meaning: 84% · Narrative: Documented ✓</div><div class="b-source">Source: Culture survey</div></div>
+          <div class="b-card warn"><div class="b-label">B9 · Enrollment &amp; Retention</div><div class="b-title">Student Enrollment</div><span class="b-status s-warn">◐ At Risk</span><div class="b-data">Enrollment vs. capacity: 91% · Retention YoY: 87%</div><div class="b-source">Source: Enrollment data</div></div>
+          <div class="b-card"><div class="b-label">B10 · Legal Compliance</div><div class="b-title">Regulatory Adherence</div><span class="b-status s-ok">✓ On Track</span><div class="b-data">Filings on-time: 100% · Past-due tasks: 0</div><div class="b-source">Source: Compliance ticketing</div></div>
+        </div>
+        <div class="dash-summary">
+          <div class="dash-sum-label">Renewal Readiness · 10 Benchmarks Tracked</div>
+          <div class="dash-sum-nums">
+            <div class="dash-num"><div class="dash-num-val ok">7</div><div class="dash-num-lbl">On Track</div></div>
+            <div class="dash-num"><div class="dash-num-val warn">2</div><div class="dash-num-lbl">At Risk</div></div>
+            <div class="dash-num"><div class="dash-num-val risk">1</div><div class="dash-num-lbl">Needs Action</div></div>
+          </div>
+          <div style="font-size:.72rem;color:rgba(255,255,255,.55)">B7 flagged — 3 vacancies &gt;45d · B9 at 91% — target 95%</div>
+        </div>
+      </div>
+
+      <!-- 360 PANEL -->
+      <div class="dpanel" id="dp-scores">
+        <div style="font-size:.72rem;color:var(--muted);margin-bottom:1rem">Sample: Dr. Marcus Thompson · Principal · Riverside Charter Academy · 2024–25</div>
+        <div class="rpt-score-row">
+          <div class="rpt-score"><div class="rpt-score-val">82</div><div class="rpt-score-lbl">Self Score</div></div>
+          <div class="rpt-score"><div class="rpt-score-val" style="color:var(--navy)">3.9</div><div class="rpt-score-lbl">Peer Avg /5</div></div>
+          <div class="rpt-score"><div class="rpt-score-val" style="color:var(--blue)">4.1</div><div class="rpt-score-lbl">Supervisor /5</div></div>
+          <div class="rpt-score"><div class="rpt-score-val" style="color:var(--burg)">3.4</div><div class="rpt-score-lbl">Direct Reports /5</div></div>
+        </div>
+        <div class="rpt-bars">
+          <div class="rdb-row"><span class="rdb-nm">Self-Awareness</span><div class="rdb-tr"><div class="rdb-fi" style="width:82%"></div></div><span class="rdb-vl">4.1</span></div>
+          <div class="rdb-row"><span class="rdb-nm">Instructional Leadership</span><div class="rdb-tr"><div class="rdb-fi" style="width:88%;background:var(--green)"></div></div><span class="rdb-vl">4.4</span></div>
+          <div class="rdb-row"><span class="rdb-nm">Communication Skills</span><div class="rdb-tr"><div class="rdb-fi" style="width:70%;background:var(--blue-light)"></div></div><span class="rdb-vl">3.5</span></div>
+          <div class="rdb-row"><span class="rdb-nm">Culture Building</span><div class="rdb-tr"><div class="rdb-fi" style="width:68%;background:var(--burg-light)"></div></div><span class="rdb-vl">3.4</span></div>
+          <div class="rdb-row"><span class="rdb-nm">Talent Development</span><div class="rdb-tr"><div class="rdb-fi" style="width:76%"></div></div><span class="rdb-vl">3.8</span></div>
+        </div>
+        <div class="insight-box">
+          <strong style="color:var(--burg)">AI-Generated Coaching Insight:</strong> Dr. Thompson's Futuristic strength explains why peers rate his strategic vision highly — but his direct reports score Culture Building at 3.4, a significant gap. His Hogan Bold score (79) suggests overconfidence under pressure may compound this. Year 1 coaching priority: build intentional belonging rituals that give staff room to be heard before moving to the next vision.
+        </div>
+      </div>
+
+      <!-- CULTURE PANEL -->
+      <div class="dpanel" id="dp-culture">
+        <div class="campus-tabs">
+          <button class="ctab on" onclick="setCampus('all',this)">All Campuses</button>
+          <button class="ctab" onclick="setCampus('A',this)">Campus A</button>
+          <button class="ctab" onclick="setCampus('B',this)">Campus B</button>
+          <button class="ctab" onclick="setCampus('C',this)">Campus C</button>
+        </div>
+        <div class="nps-row">
+          <div class="nps-block"><div class="nps-big" id="npsScore">+54</div><div class="nps-lbl">Employee NPS</div></div>
+          <div class="nps-block"><div class="nps-big" style="color:var(--green)">81%</div><div class="nps-lbl">Intent to Return</div></div>
+          <div class="nps-block"><div class="nps-big" style="color:var(--amber)">62%</div><div class="nps-lbl">Growth &amp; Advancement</div></div>
+        </div>
+        <div class="domain-grid" id="npsDomains">
+          <div class="dom-item"><div class="dom-val">78%</div><div class="dom-lbl">Outcomes</div><div class="dom-chg chg-up">↑ +6%</div></div>
+          <div class="dom-item"><div class="dom-val">67%</div><div class="dom-lbl">Belonging</div><div class="dom-chg chg-flat">→ Flat</div></div>
+          <div class="dom-item"><div class="dom-val">62%</div><div class="dom-lbl">Growth</div><div class="dom-chg chg-dn">↓ -3%</div></div>
+          <div class="dom-item"><div class="dom-val">75%</div><div class="dom-lbl">Leadership</div><div class="dom-chg chg-up">↑ +4%</div></div>
+          <div class="dom-item"><div class="dom-val">79%</div><div class="dom-lbl">Basic Needs</div><div class="dom-chg chg-up">↑ +2%</div></div>
+          <div class="dom-item"><div class="dom-val">84%</div><div class="dom-lbl">Purpose</div><div class="dom-chg chg-up">↑ +5%</div></div>
+          <div class="dom-item"><div class="dom-val">73%</div><div class="dom-lbl">Teamwork</div><div class="dom-chg chg-flat">→ +1%</div></div>
+          <div class="dom-item"><div class="dom-val">81%</div><div class="dom-lbl">Intent to Return</div><div class="dom-chg chg-up">↑ +7%</div></div>
+        </div>
+      </div>
+
+      <!-- NARRATIVE PANEL -->
+      <div class="dpanel" id="dp-narrative">
+        <div style="font-size:.75rem;color:var(--muted);margin-bottom:1rem">How leaders see themselves vs. how peers, direct reports &amp; supervisors see them — the gap is where coaching begins.</div>
+        <div class="narr-grid">
+          <div class="narr-card">
+            <div class="narr-label self">Self Perception</div>
+            <div class="narr-item">Strong communicator — explains vision clearly and rallies staff around goals</div>
+            <div class="narr-item">High follow-through — rarely drops the ball on commitments</div>
+            <div class="narr-item">Inclusive decision-maker — seeks input before acting</div>
+            <div class="narr-item">Calm under pressure — doesn't panic when things go wrong</div>
+          </div>
+          <div class="narr-card">
+            <div class="narr-label others">Others Perception (Avg of Peers + Direct Reports)</div>
+            <div class="narr-item">Moves fast — can skip communication steps when excited about an idea</div>
+            <div class="narr-item">High standards — staff sometimes feel excluded when decisions are already made</div>
+            <div class="narr-item">Confident — but can feel dismissive when staff push back on plans</div>
+            <div class="narr-item">Strategic thinker — but staff crave more predictability in the day-to-day</div>
+          </div>
+        </div>
+        <div class="insight-box" style="margin-top:1rem">
+          <strong style="color:var(--burg)">Narrative Coaching Insight:</strong> The gap between how Dr. Thompson sees himself and how others experience him is the coaching agenda. He's not wrong about his strengths — but he's operating with incomplete feedback. This report makes the invisible visible, so the coaching conversation starts with data, not assumptions.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ ASSESSMENTS ══ -->
+<section id="assessments" style="background:var(--off-white)">
+  <div class="inner">
+    <div class="sec-label">Validated Assessments</div>
+    <h2 class="sec-title">Four Instruments.<br><em>One Integrated Picture.</em></h2>
+    <p class="sec-sub">Nexera holds active licensing for four of the most rigorously validated leadership instruments in the world. Each one feeds automatically into the leader's intelligence report — no coordination burden on your school.</p>
+
+    <div class="phrase-box burg reveal">
+      <div class="pq-mark">"</div>
+      <div class="pq">Personality data without context is just a personality test. Nexera integrates every instrument into a coaching narrative your leaders can actually use.</div>
+    </div>
+
+    <div class="assess-grid reveal">
+      <div class="assess-card hogan">
+        <div class="assess-logo">Hogan</div>
+        <div class="assess-provider">Hogan Assessments · Licensed Partner</div>
+        <h3>HPI + HDS + MVPI</h3>
+        <p>The gold standard in personality assessment for leaders. Measures everyday strengths, derailment risks under pressure, and core values that drive behavior.</p>
+        <ul class="assess-list">
+          <li>HPI — Bright side: how leaders appear to others at their best</li>
+          <li>HDS — Dark side: derailment risks that surface under stress</li>
+          <li>MVPI — Values: what motivates decisions</li>
+          <li>Direct link sent by Nexera — no school coordination needed</li>
+        </ul>
+      </div>
+      <div class="assess-card disc">
+        <div class="assess-logo">DISC</div>
+        <div class="assess-provider">DISC Assessment · Licensed Partner</div>
+        <h3>Behavioral Profile</h3>
+        <p>The most widely used behavioral assessment in the world. Identifies how leaders respond — communication style, decision pace, team dynamics under pressure.</p>
+        <ul class="assess-list">
+          <li>D — Dominance: responding to problems and challenges</li>
+          <li>I — Influence: persuading others to your point of view</li>
+          <li>S — Steadiness: adapting to pace of environment</li>
+          <li>Used alongside 360° for leadership style context</li>
+        </ul>
+      </div>
+      <div class="assess-card clifton">
+        <div class="assess-logo">Gallup</div>
+        <div class="assess-provider">CliftonStrengths · Licensed Partner</div>
+        <h3>CliftonStrengths 34</h3>
+        <p>Identifies what a leader naturally does best — and gives a shared language for the whole team to understand and leverage each other's strengths.</p>
+        <ul class="assess-list">
+          <li>Top 5 Themes — the strengths leaders lead from daily</li>
+          <li>Full 34 Themes — complete picture of potential + patterns</li>
+          <li>Team Grid — how leadership team strengths complement each other</li>
+          <li>Existing school data accepted — no retake required</li>
+        </ul>
+      </div>
+      <div class="assess-card s360">
+        <div class="assess-logo">360°</div>
+        <div class="assess-provider">Nexera Multi-Rater Feedback · Proprietary</div>
+        <h3>Leadership 360° Feedback</h3>
+        <p>Structured multi-rater feedback from supervisors, peers, and direct reports. Mapped to leadership competencies and renewal benchmarks — not just generic traits.</p>
+        <ul class="assess-list">
+          <li>Self score vs. others score — the gap is the coaching agenda</li>
+          <li>Competency breakdown: culture building, communication, talent development</li>
+          <li>Values alignment signal: does how they lead match what they say they value?</li>
+          <li>Year-over-year tracking — movement from baseline shown each cycle</li>
+        </ul>
+      </div>
+      <!-- Culture Survey as 5th card spanning remaining space -->
+      <div class="assess-card" style="border-top-color:var(--burg-mid);grid-column:span 2">
+        <div class="assess-logo" style="color:var(--burg-mid)">Culture Survey</div>
+        <div class="assess-provider">Organizational Culture Survey · Nexera · Available Standalone</div>
+        <h3>Staff Culture &amp; Climate Diagnostic</h3>
+        <p>A research-backed, longitudinal culture diagnostic with campus-level breakdowns, eNPS reporting, and values-alignment domains. Tracks 8 domains across multiple cycles — giving leaders a measurable read on whether your values are being lived, not just declared.</p>
+        <ul class="assess-list" style="columns:2;gap:1.5rem">
+          <li>8 culture domains including Purpose &amp; Meaning, Belonging, Basic Needs</li>
+          <li>Multi-year longitudinal tracking — trend lines per domain per campus</li>
+          <li>Tiered admin access — network sees all, campus leaders see their building</li>
+          <li>Automated eNPS calculation with sector benchmarks where available</li>
+          <li>Facilitated data interpretation session with your leadership team</li>
+          <li>Available to any organization — not exclusive to Nexera clients</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOW ACCESS WORKS -->
+    <div class="assess-flow reveal">
+      <h4>How Assessment Access Works — No Coordination Burden on Your School</h4>
+      <div class="af-steps">
+        <div class="af-step"><div class="af-num">1</div><h5>Submit Participant List</h5><p>School provides names and emails. Nexera manages everything else.</p></div>
+        <div class="af-step"><div class="af-num">2</div><h5>Nexera Sends Direct Link</h5><p>Each leader gets a personalized link — Hogan, Gallup, or DISC. No login setup needed.</p></div>
+        <div class="af-step"><div class="af-num">3</div><h5>Leader Completes on Provider Site</h5><p>Assessed on the licensed provider's secure platform. 20–45 minutes depending on instrument.</p></div>
+        <div class="af-step"><div class="af-num">4</div><h5>Results Flow Into Nexera Report</h5><p>Personality data integrates automatically into the leader's full intelligence report and coaching narrative.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VALUES ══ -->
+<section id="values">
+  <div class="inner">
+    <div class="sec-label">Values Intelligence</div>
+    <h2 class="sec-title">Beyond the Wall Poster —<br><em>Values That Actually Work</em></h2>
+    <p class="sec-sub">Defining values is easy. Embedding them into how leaders perform, how people are evaluated, and how accountability is built — that's the hard part. Nexera moves schools from declaring values to living them.</p>
+
+    <div class="maturity-strip reveal">
+      <div class="maturity-block"><div class="maturity-num">Stage 1</div><div class="maturity-title">Declared</div><div class="maturity-desc">Values on paper. Posted on walls, listed in handbooks.</div><div class="maturity-nexera" style="color:var(--burg)">Most schools stop here</div></div>
+      <div class="maturity-block"><div class="maturity-num">Stage 2</div><div class="maturity-title">Discussed</div><div class="maturity-desc">Values referenced in meetings. Staff can name them. Alignment is inconsistent.</div><div class="maturity-nexera" style="color:var(--amber)">Common goal</div></div>
+      <div class="maturity-block active"><div class="maturity-num">Stage 3</div><div class="maturity-title">Embedded</div><div class="maturity-desc">Values integrated into performance, coaching, compensation signals, and culture data.</div><div class="maturity-nexera">← Nexera moves you here</div></div>
+      <div class="maturity-block"><div class="maturity-num">Stage 4</div><div class="maturity-title">Lived</div><div class="maturity-desc">Values drive daily decisions at every level. Culture survey confirms alignment.</div><div class="maturity-nexera" style="color:var(--green)">The Nexera goal</div></div>
+    </div>
+
+    <div class="values-grid" style="margin-top:2rem">
+      <div class="val-card reveal"><div class="val-card-accent" style="background:var(--navy)"></div><div style="padding-left:.8rem"><div class="val-stage" style="color:var(--navy)">Layer 1 · Performance</div><div class="val-title">Values in the KPI Model</div><div class="val-body">Each leader's KPI goals include a values alignment indicator — not just what they achieved, but how they led. Culture survey domains map to stated organizational values, creating a measurable feedback loop.</div><div class="val-how"><div class="val-how-label">How Nexera Does It</div>Culture survey results show value-by-value alignment scores. Leaders see exactly where values are being lived — and where the gap is widening.</div><div class="val-tags"><span class="val-tag">B3 Culture</span><span class="val-tag">B8 Mission</span><span class="val-tag">360° Feedback</span></div></div></div>
+      <div class="val-card reveal"><div class="val-card-accent" style="background:var(--burg)"></div><div style="padding-left:.8rem"><div class="val-stage" style="color:var(--burg)">Layer 2 · Compensation</div><div class="val-title">Values Tied to Compensation Conversations</div><div class="val-body">Nexera provides a values-performance matrix — connecting how a leader leads to the compensation conversation, not just what they produced. Performance divorced from values sends the wrong message.</div><div class="val-how"><div class="val-how-label">How Nexera Does It</div>Annual board reports include a leadership integrity signal — 360° scores mapped against stated values, giving boards data to anchor compensation decisions in both performance and culture contribution.</div><div class="val-tags"><span class="val-tag">Board Report</span><span class="val-tag">B6 Governance</span><span class="val-tag">360° Scores</span></div></div></div>
+      <div class="val-card reveal"><div class="val-card-accent" style="background:var(--blue)"></div><div style="padding-left:.8rem"><div class="val-stage" style="color:var(--blue)">Layer 3 · Coaching</div><div class="val-title">Values in Coaching &amp; Leadership Review</div><div class="val-body">Nexera's coaching model goes deeper than behavior — it surfaces the values-behavior gap. When a leader's Hogan HDS profile shows a derailment risk that contradicts a stated value, the coaching conversation names it directly.</div><div class="val-how"><div class="val-how-label">How Nexera Does It</div>Hogan MVPI identifies where a leader's personal values align or conflict with organizational values — surfacing misalignment before it becomes a culture or retention problem.</div><div class="val-tags"><span class="val-tag">Hogan MVPI</span><span class="val-tag">Coaching Plan</span><span class="val-tag">B7 Capacity</span></div></div></div>
+      <div class="val-card reveal"><div class="val-card-accent" style="background:var(--steel)"></div><div style="padding-left:.8rem"><div class="val-stage" style="color:var(--steel)">Layer 4 · Culture Confirmation</div><div class="val-title">Values Measured Across the Whole Organization</div><div class="val-body">You can't embed what you can't measure. Nexera's Culture Survey includes domains mapped to each network's stated values — so every cycle answers: "Are our values being experienced by staff, or just proclaimed by leadership?"</div><div class="val-how"><div class="val-how-label">How Nexera Does It</div>Survey domains include Purpose &amp; Meaning, Belonging, Basic Needs, and Instructional Support — each tied to specific organizational values. Campus-level breakdowns show where values land and where they don't.</div><div class="val-tags"><span class="val-tag">Culture Survey</span><span class="val-tag">B3 Climate</span><span class="val-tag">eNPS</span></div></div></div>
+    </div>
+
+    <div class="phrase-box reveal" style="margin-top:2rem">
+      <div class="pq-mark">"</div>
+      <div class="pq">Organizations that define values without embedding them into performance, compensation, and accountability aren't building culture — they're building a poster.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AI IN PRACTICE ══ -->
+<div class="ai-section" id="ai-section">
+  <div class="ai-inner">
+    <div class="sec-label" style="color:rgba(255,255,255,.55)">AI in Leadership Development</div>
+    <h2 class="sec-title" style="color:#fff">AI Automates the Technical.<br><em style="color:rgba(255,255,255,.55)">Coaches Deliver the Human.</em></h2>
+    <p class="sec-sub" style="color:rgba(255,255,255,.65);max-width:680px">Nexera uses AI to automate the analysis, synthesis, and reporting tasks that typically consume a coach's time — so every session is spent on the human development work that actually changes behavior. Technology handles the data. People do the developing.</p>
+
+    <table class="ai-table reveal">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Without Nexera AI</th>
+          <th>With Nexera AI</th>
+          <th>Human Outcome Gained</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>360° Report Synthesis</td>
+          <td>Coach reads 5+ rater responses manually, writes narrative by hand — 3–4 hrs/leader</td>
+          <td>AI synthesizes all rater data, generates draft coaching narrative with gap analysis in seconds</td>
+          <td><div class="ai-outcome">Coach spends session coaching — not compiling</div></td>
+        </tr>
+        <tr>
+          <td>Personality Integration</td>
+          <td>Coach manually cross-references Hogan + DISC + CliftonStrengths — often skipped due to time</td>
+          <td>AI integrates all three assessments into a unified leader profile automatically</td>
+          <td><div class="ai-outcome">Every session starts with the full picture</div></td>
+        </tr>
+        <tr>
+          <td>Renewal Benchmark Tracking</td>
+          <td>Spreadsheets, manual data pulls, quarterly check-ins that miss early warning signals</td>
+          <td>Live dashboard tracks all 10 benchmarks in real time — flags risks before they become crises</td>
+          <td><div class="ai-outcome">Leaders act early, not reactively</div></td>
+        </tr>
+        <tr>
+          <td>Culture Survey Analysis</td>
+          <td>Survey exported to Excel, manually analyzed, weeks before results reach leadership</td>
+          <td>AI calculates eNPS, generates campus comparisons and domain trend lines automatically</td>
+          <td><div class="ai-outcome">Leadership team discusses insights in days — not weeks</div></td>
+        </tr>
+        <tr>
+          <td>Succession Readiness Mapping</td>
+          <td>Guesswork — leaders "feel ready" based on tenure or impression</td>
+          <td>AI synthesizes 360° scores, KPI trajectory, values alignment, and coaching notes into readiness ratings</td>
+          <td><div class="ai-outcome">Board sees evidence-based succession data, not gut feel</div></td>
+        </tr>
+        <tr>
+          <td>Board Report Preparation</td>
+          <td>ED or CAO spends 8–12 hrs compiling a report boards struggle to interpret</td>
+          <td>AI generates a board-ready narrative from dashboard data — mapped to renewal benchmarks</td>
+          <td><div class="ai-outcome">Board leads governance conversations — not data literacy sessions</div></td>
+        </tr>
+        <tr>
+          <td>Coaching Session Preparation</td>
+          <td>Coach reviews notes manually, asks leader to self-report progress — subjective and time-consuming</td>
+          <td>AI pre-populates session with KPI updates, 360° trend, benchmark flags, and growth indicators</td>
+          <td><div class="ai-outcome">Every minute of every session is spent on development</div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ai-phrase reveal">
+      <div class="ai-phrase-mark">"</div>
+      <div class="ai-phrase-q">AI handles the analysis. Coaches handle the humans. That's what makes Nexera sessions 10× more targeted than anything else in the market.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 90-DAY PROTOCOL ══ -->
+<section id="ninety-days">
+  <div class="inner">
+    <div class="sec-label">New Leader Onboarding</div>
+    <div class="bot-badge">90-Day Leadership Training BOT — Automated Onboarding Protocol</div>
+    <h2 class="sec-title">From Day One,<br><em>Not Day Ninety</em></h2>
+    <p class="sec-sub">Most principals are hired in July and drowning by October. Nexera's First 90 Days Protocol — powered by our automated BOT system — puts data, coaching, and a building intelligence report in every new leader's hands before their first real challenge arrives.</p>
+
+    <div class="phrase-box border reveal">
+      <div class="pq-mark">"</div>
+      <div class="pq" style="color:var(--navy)">No more sink-or-swim onboarding. Every new leader gets a data-backed start — not a desk and a good luck.</div>
+    </div>
+
+    <div class="days-grid reveal">
+      <div class="days-cell" style="border-left:4px solid var(--navy)">
+        <div class="days-week">Week 1–2</div>
+        <div class="days-num" style="color:var(--navy)">01</div>
+        <div class="days-phase" style="color:var(--navy)">Assess</div>
+        <div class="days-steps">
+          <div class="days-step">All three assessments deployed — Hogan, DISC, CliftonStrengths</div>
+          <div class="days-step">Hogan MVPI administered — values alignment baseline established</div>
+          <div class="days-step">360° rater list configured — supervisor, direct reports, peers</div>
+          <div class="days-step">First coach meeting: context intake and goal alignment</div>
+        </div>
+        <div class="days-deliver" style="background:var(--blue-pale);color:var(--navy)">📄 Baseline Assessment Report</div>
+      </div>
+      <div class="days-cell" style="border-left:4px solid var(--burg)">
+        <div class="days-week">Week 3–4</div>
+        <div class="days-num" style="color:var(--burg)">02</div>
+        <div class="days-phase" style="color:var(--burg)">Diagnose</div>
+        <div class="days-steps">
+          <div class="days-step">Staff pulse survey deployed to the building</div>
+          <div class="days-step">Culture baseline across all 8 domains including values alignment</div>
+          <div class="days-step">KPI targets set and mapped to renewal benchmarks</div>
+        </div>
+        <div class="days-deliver" style="background:var(--burg-pale);color:var(--burg)">📋 State of the Building Report</div>
+      </div>
+      <div class="days-cell" style="border-left:4px solid var(--steel)">
+        <div class="days-week">Days 45–75</div>
+        <div class="days-num" style="color:var(--steel)">03</div>
+        <div class="days-phase" style="color:var(--steel)">Align</div>
+        <div class="days-steps">
+          <div class="days-step">360° results delivered with coach debrief session</div>
+          <div class="days-step">Values-behavior alignment conversation — MVPI vs. org values</div>
+          <div class="days-step">First KPI check-in — early indicators vs. targets</div>
+        </div>
+        <div class="days-deliver" style="background:#ede9fe;color:#5b21b6">🗺️ Integrated Leadership Plan</div>
+      </div>
+      <div class="days-cell" style="border-left:4px solid var(--green)">
+        <div class="days-week">Day 90</div>
+        <div class="days-num" style="color:var(--green)">04</div>
+        <div class="days-phase" style="color:var(--green)">Launch</div>
+        <div class="days-steps">
+          <div class="days-step">90-Day Review with supervisor — data-backed, not subjective</div>
+          <div class="days-step">Coaching cadence locked for the full year</div>
+          <div class="days-step">Succession readiness baseline established and shared with CEO</div>
+        </div>
+        <div class="days-deliver" style="background:#d1fae5;color:var(--green)">✅ 90-Day Review Package</div>
+      </div>
+    </div>
+
+    <div style="background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.5rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:1.4rem">
+      <div style="font-size:1.1rem">🎯</div>
+      <p style="font-size:.82rem;color:var(--text-2);line-height:1.6;flex:1"><strong>Available as a standalone service</strong> — engage the First 90 Days Protocol every time a new principal or network leader joins your team. The BOT system automates check-ins, assessment delivery, and data collection — so your new leader gets a consistent, data-rich start every time.</p>
+      <button class="btn btn-primary" style="flex-shrink:0;font-size:.8rem;padding:.6rem 1.2rem" onclick="openModal()">Learn More →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PLATFORM PHASES ══ -->
+<section id="platform" style="background:var(--off-white)">
+  <div class="inner-sm">
+    <div class="sec-label">How It Works</div>
+    <h2 class="sec-title">The Leadership<br><em>Intelligence Platform</em></h2>
+    <p class="sec-sub">A four-phase engagement built around your leaders — from baseline data through annual board intelligence and succession planning.</p>
+    <div class="phase-list">
+      <div class="phase-item open" onclick="togglePhase(this)"><div class="phase-hd"><span class="phase-num">Phase 01</span><span class="phase-title">Baseline Launch — Establish Individual Foundations</span><span class="phase-chev">▼</span></div><div class="phase-bd"><ul class="phase-steps"><li>KPI targets set per leader, mapped to all 10 renewal benchmarks</li><li>Hogan, DISC, CliftonStrengths deployed — Nexera sends direct link to each leader</li><li>360° rater lists configured; surveys deployed automatically</li><li>Values alignment baseline established using Hogan MVPI and culture survey</li><li>New leaders enter the <strong>First 90 Days Protocol</strong> immediately</li></ul></div></div>
+      <div class="phase-item" onclick="togglePhase(this)"><div class="phase-hd"><span class="phase-num">Phase 02</span><span class="phase-title">KPI + Coaching Active — Dashboard Live</span><span class="phase-chev">▼</span></div><div class="phase-bd"><ul class="phase-steps"><li>Live KPI dashboard per leader, principal, and board — benchmarks tracked in real time</li><li>Monthly advisor coaching sessions driven by 360° priorities and KPI trends</li><li>Values-coaching layer: Hogan MVPI used to surface values-behavior alignment in every session</li><li>Succession readiness indicators update as coaching progresses</li></ul></div></div>
+      <div class="phase-item" onclick="togglePhase(this)"><div class="phase-hd"><span class="phase-num">Phase 03</span><span class="phase-title">Culture + Revision — Mid-Year Survey &amp; Goal Reset</span><span class="phase-chev">▼</span></div><div class="phase-bd"><ul class="phase-steps"><li>All-staff Organizational Culture Survey deployed — values alignment domains included</li><li>Culture scores overlaid on KPI dashboard — flags predictive risk areas by benchmark</li><li>Mid-year goal revision session: coaching priorities updated, values gaps named</li><li>Mid-year board report: culture heatmap, leader trajectories, benchmark status</li></ul></div></div>
+      <div class="phase-item" onclick="togglePhase(this)"><div class="phase-hd"><span class="phase-num">Phase 04</span><span class="phase-title">Annual Analysis — Board Intelligence + Succession Map</span><span class="phase-chev">▼</span></div><div class="phase-bd"><ul class="phase-steps"><li>Year-end 360° rescore — movement from baseline shown per leader</li><li>Annual Board Intelligence Report: all 10 benchmarks, values-performance matrix, 2–3 governance priorities</li><li>Succession Readiness Map updated — who is ready now, who needs development, where the bench is thin</li><li>Compensation conversation data provided: values alignment + performance + 360° trajectory</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SUCCESSION MAP ══ -->
+<section id="succession">
+  <div class="inner">
+    <div class="sec-label">Succession Intelligence</div>
+    <h2 class="sec-title">Know Who's Ready<br><em>Before You Need Them</em></h2>
+    <p class="sec-sub">Nexera tracks succession readiness continuously — so your board is never surprised by a vacancy, and your next leaders are being developed before the position is even open.</p>
+
+    <div class="phrase-box burg reveal">
+      <div class="pq-mark">"</div>
+      <div class="pq">The best time to find your next principal was two years ago. The second best time is right now — with data.</div>
+    </div>
+
+    <div style="background:var(--off-white);border:1.5px solid var(--border);border-radius:14px;padding:1.6rem;margin-top:1.5rem">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.4rem;flex-wrap:wrap;gap:.8rem">
+        <div><div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy)">Network Succession Readiness Map</div><div style="font-size:.68rem;color:var(--muted);margin-top:.1rem">6-Campus Network · Annual Update · For Board &amp; CEO</div></div>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+          <span class="succ-badge s-ready">Ready Now</span>
+          <span class="succ-badge s-1yr">Ready: 1 Year</span>
+          <span class="succ-badge s-2yr">Ready: 2 Years</span>
+          <span class="succ-badge s-dev">Needs Development</span>
+        </div>
+      </div>
+      <div class="succ-map-grid">
+        <div class="succ-card reveal"><div class="succ-role-label">Chief Executive</div><div class="succ-name">Dr. Sandra M.</div><div class="succ-bar-track"><div class="succ-bar-fill" style="width:88%;background:var(--green)"></div></div><div class="succ-bar-labels"><span>360° Score</span><span style="color:var(--green)">88/100</span></div><span class="succ-badge s-ready">Ready Now</span><div class="succ-note">↑ +12 pts · Strong Governance &amp; Strategic Vision · Values alignment: High</div></div>
+        <div class="succ-card reveal"><div class="succ-role-label">Chief Academic Officer</div><div class="succ-name">Dr. Yvonne K.</div><div class="succ-bar-track"><div class="succ-bar-fill" style="width:74%;background:var(--amber)"></div></div><div class="succ-bar-labels"><span>360° Score</span><span style="color:var(--amber)">74/100</span></div><span class="succ-badge s-1yr">Ready: 1 Year</span><div class="succ-note">↑ +8 pts · Coaching: Operational Execution · MVPI: Mission alignment strong</div></div>
+        <div class="succ-card reveal"><div class="succ-role-label">Principal — Campus A</div><div class="succ-name">Marcus T.</div><div class="succ-bar-track"><div class="succ-bar-fill" style="width:81%;background:var(--green)"></div></div><div class="succ-bar-labels"><span>360° Score</span><span style="color:var(--green)">81/100</span></div><span class="succ-badge s-ready">Ready Now</span><div class="succ-note">↑ +15 pts · Culture Building strength · Ready for network-level role</div></div>
+        <div class="succ-card reveal"><div class="succ-role-label">Principal — Campus B</div><div class="succ-name">Jordan W.</div><div class="succ-bar-track"><div class="succ-bar-fill" style="width:61%;background:#7c3aed"></div></div><div class="succ-bar-labels"><span>360° Score</span><span style="color:#7c3aed">61/100</span></div><span class="succ-badge s-2yr">Ready: 2 Years</span><div class="succ-note">→ Plateau at 61 · Coaching plan revised Q3 · Values gap: Collaboration</div></div>
+        <div class="succ-card reveal"><div class="succ-role-label">Chief People Officer</div><div class="succ-name">Alicia R.</div><div class="succ-bar-track"><div class="succ-bar-fill" style="width:79%;background:var(--amber)"></div></div><div class="succ-bar-labels"><span>360° Score</span><span style="color:var(--amber)">79/100</span></div><span class="succ-badge s-1yr">Ready: 1 Year</span><div class="succ-note">↑ +6 pts · Culture survey scores: Network-best · Retention ✓ Values: High</div></div>
+        <div class="succ-card reveal"><div class="succ-role-label">Principal — Campus C</div><div class="succ-name">DeShawn M.</div><div class="succ-bar-track"><div class="succ-bar-fill" style="width:44%;background:var(--burg)"></div></div><div class="succ-bar-labels"><span>360° Score</span><span style="color:var(--burg)">44/100</span></div><span class="succ-badge s-dev">Needs Development</span><div class="succ-note">↓ First-year principal · 90-Day Protocol active · Coach assigned Week 1</div></div>
+      </div>
+      <div style="margin-top:1.2rem;padding:.85rem 1.1rem;background:var(--blue-pale);border-radius:8px;border-left:2px solid var(--navy)">
+        <div style="font-size:.76rem;color:var(--text-2);line-height:1.6"><strong>Board Summary:</strong> 2 leaders are Ready Now for senior roles. 2 are on track within 12 months. 1 first-year principal is in structured 90-Day Protocol. <strong style="color:var(--burg)">Recommendation: Consider Marcus T. for network-level development ahead of a future CAO opening.</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BOARD INTELLIGENCE ══ -->
+<section id="board-report" style="background:var(--off-white)">
+  <div class="inner">
+    <div class="sec-label">Board Intelligence</div>
+    <h2 class="sec-title">Give Your Board<br><em>the Clarity to Lead</em></h2>
+    <p class="sec-sub">Charter boards are legally accountable for renewal — but most receive data they can't interpret. Nexera's Annual Board Intelligence Report translates everything into clear governance language, mapped to authorizer requirements, with a values-performance layer your board can actually act on.</p>
+
+    <div class="phrase-box light reveal">
+      <div class="pq-mark" style="color:var(--navy);">"</div>
+      <div class="pq">Boards should be making governance decisions — not conducting data literacy sessions. That's what Nexera's report makes possible.</div>
+    </div>
+
+    <div class="board-grid">
+      <div class="board-card reveal"><div class="tier-label">Tier 1 · Standalone</div><div class="tier-name">Board Renewal Report</div><div class="tier-sub">Annual · Available to any charter board</div><div class="tier-items"><div class="tier-item">All 10 renewal benchmarks — status, trend, and narrative</div><div class="tier-item">Year-over-year data per benchmark</div><div class="tier-item">2–3 governance priorities for the coming year</div><div class="tier-item">Board-ready language — no data interpretation required</div><div class="tier-item">12-page executive report format</div></div><div class="tier-buyer">Sold to: Board Chair or ED · Any charter board</div></div>
+      <div class="board-card featured reveal"><div class="tier-label">Tier 2 · Integrated</div><div class="tier-name">Board + Succession + Values</div><div class="tier-sub">Annual · Included with Full Network Partnership</div><div class="tier-items"><div class="tier-item">Everything in Tier 1</div><div class="tier-item">Succession Readiness Map — who is ready for what role</div><div class="tier-item">Values-performance matrix — how leaders lead, not just what they produce</div><div class="tier-item">Compensation data: 360° + values + KPI trajectory</div><div class="tier-item">Leadership risk assessment — bench depth by role</div><div class="tier-item">Live dashboard access for board chair</div></div><div class="tier-buyer">Included with Full Network Partnership</div></div>
+      <div class="board-card reveal"><div class="tier-label">Tier 3 · Urgent</div><div class="tier-name">Renewal Readiness Audit</div><div class="tier-sub">On-Demand · Any stage</div><div class="tier-items"><div class="tier-item">Rapid 30-day assessment of all 10 benchmark statuses</div><div class="tier-item">Gap analysis — which benchmarks are at risk and why</div><div class="tier-item">Evidence compilation for authorizer submission</div><div class="tier-item">Recommended 90-day action plan per benchmark</div><div class="tier-item">Board presentation included</div></div><div class="tier-buyer">For networks 12–18 months from renewal review</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ KPI MODEL ══ -->
+<section id="kpi-model">
+  <div class="inner">
+    <div class="sec-label">The KPI Model</div>
+    <h2 class="sec-title">Every Leader. <em>Quantifiable Goals.</em></h2>
+    <p class="sec-sub">Every leader receives accountability-based KPI targets grounded in criteria determined by the school network — connected directly to charter renewal benchmarks.</p>
+
+    <div style="background:var(--navy);border-radius:14px;padding:1.5rem 1.8rem;margin:2rem 0" class="reveal">
+      <div style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:1.1rem">Charter Renewal Benchmark Framework — 10 Benchmarks · 3 Sections</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
+        <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:1rem"><div style="font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.6rem">Section 1 · Academic Success</div><div style="display:flex;flex-direction:column;gap:.3rem"><div style="font-size:.78rem;color:rgba(255,255,255,.8)"><span style="color:#a8c4f0;font-weight:700;margin-right:.4rem">B1</span>Student Performance</div><div style="font-size:.78rem;color:rgba(255,255,255,.8)"><span style="color:#a8c4f0;font-weight:700;margin-right:.4rem">B2</span>Teaching &amp; Learning</div><div style="font-size:.78rem;color:rgba(255,255,255,.8)"><span style="color:#a8c4f0;font-weight:700;margin-right:.4rem">B3</span>Culture, Climate &amp; Family Engagement</div></div></div>
+        <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:1rem"><div style="font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.6rem">Section 2 · Organizational Soundness</div><div style="display:flex;flex-direction:column;gap:.3rem"><div style="font-size:.78rem;color:rgba(255,255,255,.8)"><span style="color:#a8c4f0;font-weight:700;margin-right:.4rem">B4</span>Financial Condition</div><div style="font-size:.78rem;color:rgba(255,255,255,.8)"><span style="color:#a8c4f0;font-weight:700;margin-right:.4rem">B5</span>Financial Management</div><div style="font-size:.78rem;color:rgba(255,255,255,.8)"><span style="color:#a8c4f0;font-weight:700;margin-right:.4rem">B6</span>Board Oversight &amp; Governance</div><div style="font-size:.78rem;color:rgba(255,255,255,.8)"><span style="color:#a8c4f0;font-weight:700;margin-right:.4rem">B7</span>Organizational Capacity</div></div></div>
+        <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:1rem"><div style="font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.6rem">Section 3 · Faithfulness to Charter &amp; Law</div><div style="display:flex;flex-direction:column;gap:.3rem"><div style="font-size:.78rem;color:rgba(255,255,255,.8)"><span style="color:#a8c4f0;font-weight:700;margin-right:.4rem">B8</span>Mission &amp; Key Design Elements</div><div style="font-size:.78rem;color:rgba(255,255,255,.8)"><span style="color:#a8c4f0;font-weight:700;margin-right:.4rem">B9</span>Enrollment, Recruitment &amp; Retention</div><div style="font-size:.78rem;color:rgba(255,255,255,.8)"><span style="color:#a8c4f0;font-weight:700;margin-right:.4rem">B10</span>Legal Compliance</div></div></div>
+      </div>
+    </div>
+
+    <div class="kpi-cards">
+      <div class="kpi-card-role reveal"><div class="kl-role">Executive Leader</div><div class="kl-title">CEO / Superintendent</div><div class="kl-focus">Focus: Governance, Mission Fidelity &amp; Organizational Trust</div><div class="kl-narrative">"If staff don't know the 'why' behind our strategy, our growth stalls."</div><div class="kl-kpi">📊 Leadership Efficacy ≥ 75% · Board 360° ≥ 3.5/5 · 100% filings on-time · eNPS ≥ +40</div><ul class="kl-starters"><li>Board quorum ≥ 75% of all meetings (B6)</li><li>Purpose &amp; Meaning culture score ≥ 80% (B8)</li><li>0 unresolved compliance findings (B10)</li></ul></div>
+      <div class="kpi-card-role reveal"><div class="kl-role">Academic Leadership</div><div class="kl-title">Chief Academic Officer</div><div class="kl-focus">Focus: Student Outcomes, Instructional Quality &amp; Professional Growth</div><div class="kl-narrative">"We must create a culture where feedback is a gift, not a gotcha."</div><div class="kl-kpi">📊 ELA/Math proficiency ≥ network target · SGP ≥ 50th · PD fidelity ≥ 85% · Obs cycles 90%+</div><ul class="kl-starters"><li>ELA + Math growth vs. prior year trending up (B1)</li><li>80% favorable on instructional support in culture survey (B2)</li><li>Student outcomes on-track to charter promises (B8)</li></ul></div>
+      <div class="kpi-card-role reveal"><div class="kl-role">People &amp; Culture</div><div class="kl-title">Chief People Officer</div><div class="kl-focus">Focus: Staff Retention, Culture Health &amp; Leadership Development</div><div class="kl-narrative">"Our best teachers leave when they stop growing. That's a leadership failure, not a talent shortage."</div><div class="kl-kpi">📊 Staff retention ≥ 85% · eNPS ≥ +35 · Vacancies &gt;45d = 0 · Coaching completion 100%</div><ul class="kl-starters"><li>Culture survey score ≥ 75% favorable across all domains (B3)</li><li>Open roles filled within 30 days (B7)</li><li>All leader coaching sessions completed per schedule</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CULTURE SURVEY ══ -->
+<section id="culture-survey" style="background:var(--off-white)">
+  <div class="inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
+      <div>
+        <div class="cs-sep-tag">◈ Available as Standalone Service</div>
+        <div class="sec-label">Organizational Culture Intelligence</div>
+        <h2 class="sec-title">Culture Health Survey</h2>
+        <p class="sec-sub">A rigorous, research-backed culture diagnostic with multi-year longitudinal tracking, campus-level breakdowns, eNPS reporting, and facilitated data interpretation sessions.</p>
+        <p style="font-size:.84rem;color:var(--muted);line-height:1.65;margin-top:.9rem">Available to any organization — not exclusive to Nexera leadership clients. Charter school networks, nonprofits, corporations, and districts can engage this service independently.</p>
+        <div style="display:flex;gap:.8rem;margin-top:1.8rem;flex-wrap:wrap">
+          <button class="btn btn-primary" onclick="openModal()">Request Culture Survey</button>
+          <a href="#dashboard" class="btn btn-outline" onclick="navGo(event,'dashboard');switchDash('culture',document.querySelectorAll('.dtab')[2]);return false">View Sample Data</a>
+        </div>
+        <div class="culture-features">
+          <div class="cf-card reveal"><div class="cf-icon">📈</div><h4>Longitudinal Tracking</h4><p>Year-over-year trend lines per domain, per campus, per demographic group — built into every report.</p></div>
+          <div class="cf-card reveal"><div class="cf-icon">🏫</div><h4>Multi-Campus + Tiered Access</h4><p>Network admins see the full org. Campus leaders see their building only. Full transparency where it matters.</p></div>
+          <div class="cf-card reveal"><div class="cf-icon">📊</div><h4>eNPS + 8 Domain Reporting</h4><p>Automated eNPS across 8 culture domains with Promoter/Passive/Detractor breakdown per campus.</p></div>
+          <div class="cf-card reveal"><div class="cf-icon">🎙️</div><h4>Facilitated Interpretation Sessions</h4><p>Nexera facilitates a data interpretation session with your admin team before results reach staff.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="phrase-box reveal" style="margin-bottom:1.2rem">
+          <div class="pq-mark">"</div>
+          <div class="pq">You can't embed what you can't measure. Culture survey data makes the invisible visible — before it becomes a retention crisis.</div>
+        </div>
+        <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.4rem">
+          <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--burg);margin-bottom:.9rem">8 Culture Domains — Network View</div>
+          <div class="domain-grid">
+            <div class="dom-item"><div class="dom-val">78%</div><div class="dom-lbl">Outcomes</div><div class="dom-chg chg-up">↑ +6%</div></div>
+            <div class="dom-item"><div class="dom-val">67%</div><div class="dom-lbl">Belonging</div><div class="dom-chg chg-flat">→ Flat</div></div>
+            <div class="dom-item"><div class="dom-val">62%</div><div class="dom-lbl">Growth</div><div class="dom-chg chg-dn">↓ -3%</div></div>
+            <div class="dom-item"><div class="dom-val">75%</div><div class="dom-lbl">Leadership</div><div class="dom-chg chg-up">↑ +4%</div></div>
+            <div class="dom-item"><div class="dom-val">79%</div><div class="dom-lbl">Basic Needs</div><div class="dom-chg chg-up">↑ +2%</div></div>
+            <div class="dom-item"><div class="dom-val">84%</div><div class="dom-lbl">Purpose</div><div class="dom-chg chg-up">↑ +5%</div></div>
+            <div class="dom-item"><div class="dom-val">73%</div><div class="dom-lbl">Teamwork</div><div class="dom-chg chg-flat">→ +1%</div></div>
+            <div class="dom-item"><div class="dom-val">81%</div><div class="dom-lbl">Intent to Return</div><div class="dom-chg chg-up">↑ +7%</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHO WE SERVE ══ -->
+<section id="who-we-serve">
+  <div class="inner">
+    <div class="sec-label">Who We Serve</div>
+    <h2 class="sec-title">Leaders Doing <em>Real Work</em><br>in Real Schools</h2>
+    <div class="serve-grid">
+      <div class="serve-card reveal"><div class="serve-avatar">👩🏽‍💼</div><div class="serve-role">Network Executive</div><div class="serve-name">Dr. Sandra M.</div><div class="serve-org">CEO · 6-Campus Charter Network</div><div class="serve-quote">"I needed data that showed me which principals were thriving and which needed support — before it became a crisis."</div><div class="serve-tags"><span class="serve-tag">Succession Map</span><span class="serve-tag">Board Reports</span><span class="serve-tag">KPI Scorecard</span></div></div>
+      <div class="serve-card reveal"><div class="serve-avatar">👨🏿‍🏫</div><div class="serve-role">School Principal</div><div class="serve-name">Marcus T.</div><div class="serve-org">Principal · K–8 Urban Charter</div><div class="serve-quote">"The 360° was the first time I saw what my teachers actually thought about my leadership — not what they said to my face."</div><div class="serve-tags"><span class="serve-tag">360° Feedback</span><span class="serve-tag">Coaching</span><span class="serve-tag">90-Day Protocol</span></div></div>
+      <div class="serve-card reveal"><div class="serve-avatar">👩🏾‍🎓</div><div class="serve-role">Chief Academic Officer</div><div class="serve-name">Dr. Yvonne K.</div><div class="serve-org">CAO · Tri-Campus Charter Network</div><div class="serve-quote">"Hogan showed me the derailment risks I was blind to. My Nexera coach helped me turn that into a real plan."</div><div class="serve-tags"><span class="serve-tag">Hogan HPI/HDS</span><span class="serve-tag">DISC</span><span class="serve-tag">Leadership Report</span></div></div>
+      <div class="serve-card reveal"><div class="serve-avatar">👨🏻‍💼</div><div class="serve-role">Nexera Advisor</div><div class="serve-name">James R.</div><div class="serve-org">Former Superintendent · Nexera Collective</div><div class="serve-quote">"28 years in education leadership. Now I give that back — and the data platform makes my coaching 10× more targeted."</div><div class="serve-tags"><span class="serve-tag">Executive Coach</span><span class="serve-tag">Collective</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ROI CALCULATOR ══ -->
+<section id="roi-calculator" style="background:var(--off-white)">
+  <div class="inner">
+    <div class="sec-label">Return on Investment</div>
+    <h2 class="sec-title">How We Calculate<br><em>Leadership ROI</em></h2>
+    <p class="sec-sub">Leadership development is protection, not overhead. Below we show exactly how we think about the financial and mission value Nexera creates — transparently, with the math shown. Adjust the inputs to match your network.</p>
+
+    <div style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:2rem;margin:1.5rem 0 0">
+      <div style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--burg);margin-bottom:1.2rem">The Three Cost Drivers We Model</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem">
+        <div style="background:var(--off-white);border-radius:10px;padding:1rem;border-left:3px solid var(--navy)">
+          <div style="font-size:.72rem;font-weight:700;color:var(--navy);margin-bottom:.4rem">① Leader Replacement Cost</div>
+          <div style="font-size:.8rem;color:var(--text-2);line-height:1.6">When a principal or network leader leaves, replacement costs an average of <strong>$22,000–$35,000</strong> — including search, interview process, onboarding, and the 6–12 month productivity lag before a new hire reaches full effectiveness. Source: NAESP / RAND research on principal turnover.</div>
+        </div>
+        <div style="background:var(--off-white);border-radius:10px;padding:1rem;border-left:3px solid var(--burg)">
+          <div style="font-size:.72rem;font-weight:700;color:var(--burg);margin-bottom:.4rem">② Renewal Funding Risk</div>
+          <div style="font-size:.8rem;color:var(--text-2);line-height:1.6">A 3-year renewal instead of 5-year — or a probationary renewal — creates enrollment uncertainty worth <strong>$12–$18 per student per year</strong> in planning capacity. For a 500-student school, that's $60K–$90K in avoidable risk per year of uncertainty.</div>
+        </div>
+        <div style="background:var(--off-white);border-radius:10px;padding:1rem;border-left:3px solid var(--steel)">
+          <div style="font-size:.72rem;font-weight:700;color:var(--steel);margin-bottom:.4rem">③ Development ROI</div>
+          <div style="font-size:.8rem;color:var(--text-2);line-height:1.6">Leaders in structured, data-driven coaching programs show <strong>measurably stronger retention, culture, and student outcomes</strong> within 12–24 months. We count every leader in active coaching as a protected investment — not just a cost line.</div>
+        </div>
+      </div>
+
+      <div style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);margin-bottom:1rem">Adjust to Your Network</div>
+      <div class="roi-grid">
+        <div class="roi-group">
+          <div class="roi-label">Leaders in Your Network</div>
+          <div class="roi-sublabel">Principals, CAO, CPO, CFO, CEO</div>
+          <div class="roi-row"><input type="range" class="roi-slider" id="r-leaders" min="3" max="30" value="8" oninput="calcROI()"><span class="roi-val" id="v-leaders">8</span></div>
+        </div>
+        <div class="roi-group">
+          <div class="roi-label">Leaders at Retention Risk</div>
+          <div class="roi-sublabel">Realistically, how many could leave in 2 years?</div>
+          <div class="roi-row"><input type="range" class="roi-slider" id="r-risk" min="1" max="10" value="3" oninput="calcROI()"><span class="roi-val" id="v-risk">3</span></div>
+        </div>
+        <div class="roi-group">
+          <div class="roi-label">Years Until Next Renewal</div>
+          <div class="roi-sublabel">How close is your authorizer review?</div>
+          <div class="roi-row"><input type="range" class="roi-slider" id="r-renewal" min="1" max="5" value="3" oninput="calcROI()"><span class="roi-val" id="v-renewal">3 yrs</span></div>
+        </div>
+        <div class="roi-group">
+          <div class="roi-label">Network Enrollment</div>
+          <div class="roi-sublabel">Total students across all campuses</div>
+          <div class="roi-row"><input type="range" class="roi-slider" id="r-students" min="100" max="3000" step="50" value="800" oninput="calcROI()"><span class="roi-val" id="v-students">800</span></div>
+        </div>
+      </div>
+
+      <div class="roi-result-box" style="margin-top:1.5rem">
+        <div style="font-size:.64rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1rem">Estimated Value at Stake</div>
+        <div class="roi-metrics">
+          <div class="roi-metric">
+            <div class="roi-metric-val t" id="rm-retention">—</div>
+            <div class="roi-metric-label">Retention risk value<br><span style="font-size:.6rem;opacity:.6">Leaders at risk × avg $22K replacement cost</span></div>
+          </div>
+          <div class="roi-metric">
+            <div class="roi-metric-val g" id="rm-renewal">—</div>
+            <div class="roi-metric-label">Renewal planning value<br><span style="font-size:.6rem;opacity:.6">Enrollment × $12–18 per student per year</span></div>
+          </div>
+          <div class="roi-metric">
+            <div class="roi-metric-val p" id="rm-coached">—</div>
+            <div class="roi-metric-label">Leaders in structured<br>data-driven coaching</div>
+          </div>
+        </div>
+        <div class="roi-insight" id="roi-insight-text">Adjust sliders above to see your network's accountability picture.</div>
+        <div style="font-size:.65rem;color:rgba(255,255,255,.35);text-align:center;margin-top:.8rem;font-style:italic">These are estimates based on published research on principal turnover and charter renewal outcomes. Nexera does not guarantee specific financial outcomes. Your actual costs and risk profile will vary.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES OVERVIEW ══ -->
+<section id="services" style="background:var(--off-white)">
+  <div class="inner">
+    <div class="sec-label">Our Services</div>
+    <h2 class="sec-title">Everything Nexera <em>Delivers</em></h2>
+    <p class="sec-sub">Six integrated services. All designed to work together — or available as standalone engagements for schools at any stage.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem">
+      <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.6rem;border-top:4px solid var(--navy);transition:all .25s" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,94,.1)'" onmouseleave="this.style.boxShadow='none'">
+        <div style="font-size:1.6rem;margin-bottom:.7rem">🎯</div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--burg);margin-bottom:.3rem">Service 1</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem">Leadership Assessment Suite</div>
+        <div style="font-size:.82rem;color:var(--text-2);line-height:1.65;margin-bottom:.8rem">Four validated instruments — Hogan (HPI/HDS/MVPI), DISC, CliftonStrengths, and Nexera 360° — fully licensed, deployed directly to leaders, and integrated automatically into a unified coaching report.</div>
+        <div style="font-size:.72rem;color:var(--muted)">✓ Standalone or integrated &nbsp;·&nbsp; ✓ Per leader or full network</div>
+      </div>
+      <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.6rem;border-top:4px solid var(--burg);transition:all .25s" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,94,.1)'" onmouseleave="this.style.boxShadow='none'">
+        <div style="font-size:1.6rem;margin-bottom:.7rem">🚀</div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--burg);margin-bottom:.3rem">Service 2</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem">First 90 Days Protocol</div>
+        <div style="font-size:.82rem;color:var(--text-2);line-height:1.65;margin-bottom:.8rem">A structured, data-driven onboarding system for new principals and network leaders. Assessments, building pulse survey, KPI targets, 360° debrief, and coaching cadence — all established before Day 90.</div>
+        <div style="font-size:.72rem;color:var(--muted)">✓ Standalone per new hire &nbsp;·&nbsp; ✓ BOT-automated check-ins</div>
+      </div>
+      <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.6rem;border-top:4px solid var(--steel);transition:all .25s" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,94,.1)'" onmouseleave="this.style.boxShadow='none'">
+        <div style="font-size:1.6rem;margin-bottom:.7rem">📊</div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--burg);margin-bottom:.3rem">Service 3</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem">KPI + Live Dashboard</div>
+        <div style="font-size:.82rem;color:var(--text-2);line-height:1.65;margin-bottom:.8rem">Custom accountability goals for every leader, mapped to all 10 charter renewal benchmarks. Live dashboard gives principals, network leaders, and boards real-time visibility into benchmark status and leadership progress.</div>
+        <div style="font-size:.72rem;color:var(--muted)">✓ Per leader KPI model &nbsp;·&nbsp; ✓ Board dashboard access</div>
+      </div>
+      <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.6rem;border-top:4px solid var(--blue);transition:all .25s" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,94,.1)'" onmouseleave="this.style.boxShadow='none'">
+        <div style="font-size:1.6rem;margin-bottom:.7rem">🔄</div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--burg);margin-bottom:.3rem">Service 4</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem">Succession Planning System</div>
+        <div style="font-size:.82rem;color:var(--text-2);line-height:1.65;margin-bottom:.8rem">A transparent, values-anchored succession readiness model. Criteria set collaboratively with each network. Leaders receive their readiness profile and development path — no black-box scoring, no surprises.</div>
+        <div style="font-size:.72rem;color:var(--muted)">✓ Board-level map &nbsp;·&nbsp; ✓ Individual leader profile</div>
+      </div>
+      <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.6rem;border-top:4px solid var(--burg-mid);transition:all .25s" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,94,.1)'" onmouseleave="this.style.boxShadow='none'">
+        <div style="font-size:1.6rem;margin-bottom:.7rem">🏛️</div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--burg);margin-bottom:.3rem">Service 5</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem">Board Intelligence Report</div>
+        <div style="font-size:.82rem;color:var(--text-2);line-height:1.65;margin-bottom:.8rem">Annual report for charter boards — all 10 renewal benchmarks, succession readiness map, values-performance matrix, and 2–3 governance priorities. Written in board-ready language. No data interpretation required.</div>
+        <div style="font-size:.72rem;color:var(--muted)">✓ Standalone or integrated &nbsp;·&nbsp; ✓ Board presentation included</div>
+      </div>
+      <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.6rem;border-top:4px solid var(--green);transition:all .25s" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,94,.1)'" onmouseleave="this.style.boxShadow='none'">
+        <div style="font-size:1.6rem;margin-bottom:.7rem">🌡️</div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--burg);margin-bottom:.3rem">Service 6</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem">Organizational Culture Survey</div>
+        <div style="font-size:.82rem;color:var(--text-2);line-height:1.65;margin-bottom:.8rem">Research-backed culture diagnostic with 8 domains, longitudinal tracking, campus-level breakdowns, eNPS reporting, and facilitated interpretation. Available to any organization — not exclusive to Nexera clients.</div>
+        <div style="font-size:.72rem;color:var(--muted)">✓ Standalone service &nbsp;·&nbsp; ✓ Any org type</div>
+      </div>
+    </div>
+
+    <div style="margin-top:1.5rem;background:var(--navy);border-radius:12px;padding:1.2rem 1.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+      <div style="color:rgba(255,255,255,.8);font-size:.85rem;line-height:1.5"><strong style="color:#fff">Full Platform Partnership</strong> includes all six services — coordinated, integrated, and delivered as a single annual engagement for your network leadership team.</div>
+      <button class="btn btn-cta-white" onclick="openModal()" style="flex-shrink:0;font-size:.82rem">See Pricing Options →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT US ══ -->
+<section id="about">
+  <div class="inner">
+    <div class="sec-label">About Nexera</div>
+    <h2 class="sec-title">Built From the <em>Inside Out</em></h2>
+    <p class="sec-sub">Nexera was not built by consultants who study charter schools. It was built by two leaders who ran them — and designed every tool around what they wish they'd had when they needed it most.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem">
+      <!-- Founder 1 -->
+      <div style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:2rem;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:5px;background:var(--navy)"></div>
+        <div style="display:flex;gap:1.2rem;align-items:flex-start;margin-bottom:1.2rem">
+          <div style="width:64px;height:64px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fff;flex-shrink:0">M</div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--navy)">Mustafa [Founder]</div>
+            <div style="font-size:.74rem;font-weight:700;color:var(--burg);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem">Co-Founder &amp; CEO</div>
+            <div style="font-size:.76rem;color:var(--muted);margin-top:.15rem">25+ Years in Charter Education Leadership</div>
+          </div>
+        </div>
+        <div style="font-size:.84rem;color:var(--text-2);line-height:1.72;margin-bottom:1.2rem">Mustafa has spent over two decades building and leading K–12 charter school networks — scaling operations, leading charter renewals, and developing hundreds of teachers and school leaders. He has served as an executive director, led multi-campus networks, and designed the accountability and data systems that now power Nexera's platform. His driving question has always been the same: <em>how do we know if every leader is developing — and how do we act on that before it's too late?</em></div>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+          <span style="font-size:.65rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;background:var(--blue-pale);color:var(--navy)">Charter School Operations</span>
+          <span style="font-size:.65rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;background:var(--blue-pale);color:var(--navy)">Leadership Development</span>
+          <span style="font-size:.65rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;background:var(--blue-pale);color:var(--navy)">Renewal Strategy</span>
+          <span style="font-size:.65rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;background:var(--blue-pale);color:var(--navy)">Data Systems</span>
+          <span style="font-size:.65rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;background:var(--blue-pale);color:var(--navy)">K–12 Network Scaling</span>
+        </div>
+      </div>
+
+      <!-- Founder 2 -->
+      <div style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:2rem;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:5px;background:var(--burg)"></div>
+        <div style="display:flex;gap:1.2rem;align-items:flex-start;margin-bottom:1.2rem">
+          <div style="width:64px;height:64px;border-radius:50%;background:var(--burg);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fff;flex-shrink:0">C</div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--navy)">[Co-Founder Name]</div>
+            <div style="font-size:.74rem;font-weight:700;color:var(--burg);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem">Co-Founder &amp; Chief Coaching Officer</div>
+            <div style="font-size:.76rem;color:var(--muted);margin-top:.15rem">25+ Years in Education Leadership &amp; Executive Coaching</div>
+          </div>
+        </div>
+        <div style="font-size:.84rem;color:var(--text-2);line-height:1.72;margin-bottom:1.2rem">A veteran educational leader and certified executive coach, [Co-Founder] brings 25+ years of experience developing leaders across public, private, and charter school systems. Licensed in Hogan Assessments, DISC, and CliftonStrengths, [they] designed Nexera's coaching model around one principle: <em>personality data without context is just a test — it becomes transformative when a skilled coach uses it to surface what a leader cannot see on their own.</em></div>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+          <span style="font-size:.65rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;background:var(--burg-pale);color:var(--burg)">Executive Coaching</span>
+          <span style="font-size:.65rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;background:var(--burg-pale);color:var(--burg)">Hogan Certified</span>
+          <span style="font-size:.65rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;background:var(--burg-pale);color:var(--burg)">DISC &amp; CliftonStrengths</span>
+          <span style="font-size:.65rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;background:var(--burg-pale);color:var(--burg)">Leadership Curriculum Design</span>
+          <span style="font-size:.65rem;font-weight:700;padding:.18rem .55rem;border-radius:4px;background:var(--burg-pale);color:var(--burg)">Values-Based Coaching</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission + Vision restated in about context -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem">
+      <div style="background:var(--navy);border-radius:12px;padding:1.4rem 1.8rem;color:#fff">
+        <div style="font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.5rem">Our Mission</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.35">Develop leaders who build schools that last.</div>
+      </div>
+      <div style="background:var(--burg);border-radius:12px;padding:1.4rem 1.8rem;color:#fff">
+        <div style="font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.5rem">Our Vision</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.35">A charter sector where renewal is a confirmation — not a crisis.</div>
+      </div>
+    </div>
+
+    <div style="background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:1.4rem 1.8rem;margin-top:1.2rem;border-left:4px solid var(--navy)">
+      <div style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:.5rem">50+ Combined Years. One Platform.</div>
+      <p style="font-size:.86rem;color:var(--text-2);line-height:1.72">Between them, Nexera's founders have led charter renewals, scaled K–12 networks, developed hundreds of teachers and leaders, coached principals through their first years and their hardest years, and designed the data systems that now power this platform. <strong>This isn't a product built by outsiders studying charter schools — it was built from inside one, and refined by everything we wish we'd had when we needed it most.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section id="cta">
+  <div class="inner" style="text-align:center">
+    <div class="sec-label" style="justify-content:center;display:flex;color:rgba(255,255,255,.45)">Get Started</div>
+    <h2 class="sec-title">Ready to Build a<br><em>Leadership Pipeline That Lasts?</em></h2>
+    <p class="sec-sub" style="margin:0 auto 2rem">Whether you need full platform leadership development, a standalone culture survey, or a board intelligence report — let's connect.</p>
+    <div class="cta-actions">
+      <button class="btn btn-cta-white" onclick="openModal()">Apply to Partner With Nexera</button>
+      <a class="btn btn-outline" style="border-color:rgba(255,255,255,.3);color:#fff" href="#" onclick="navGo(event,'dashboard');return false">Explore the Dashboard</a>
+    </div>
+    <div style="margin-top:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border-radius:12px;overflow:hidden;max-width:700px;margin-left:auto;margin-right:auto">
+      <div style="padding:1.5rem;background:rgba(255,255,255,.05);text-align:center"><div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fff">Know</div><div style="font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.2rem">Every leader, deeply</div></div>
+      <div style="padding:1.5rem;background:rgba(255,255,255,.05);text-align:center"><div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fff">Develop</div><div style="font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.2rem">Every leader, intentionally</div></div>
+      <div style="padding:1.5rem;background:rgba(255,255,255,.05);text-align:center"><div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fff">Renew</div><div style="font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.2rem">With confidence, not crisis</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-copy">© 2025 Nexera Leadership Solutions — nexeraleadership.com</div>
+  <div class="foot-links">
+    <a href="#" onclick="navGo(event,'mission')">Mission</a>
+    <a href="#" onclick="navGo(event,'platform')">Platform</a>
+    <a href="#" onclick="navGo(event,'assessments')">Assessments</a>
+    <a href="#" onclick="navGo(event,'dashboard')">Dashboard</a>
+    <a href="#" onclick="navGo(event,'culture-survey')">Culture Survey</a>
+    <a href="#" onclick="navGo(event,'ai-section')">AI in Practice</a>
+    <a href="#" onclick="navGo(event,'ninety-days')">90-Day Protocol</a>
+    <a href="#" onclick="navGo(event,'services')">Services</a>
+    <a href="#" onclick="navGo(event,'about')">About</a>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="contactModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Apply to Work With Nexera</h3><button class="modal-close" onclick="closeModal()">&times;</button></div>
+    <p class="modal-sub">Tell us about your school network and what you're looking to accomplish. A Nexera advisor will review your inquiry personally within 2 business days.</p>
+    <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your full name"></div>
+    <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+    <div class="form-group"><label>Organization / Network Name</label><input type="text" placeholder="Charter School Network or District"></div>
+    <div class="form-group"><label>Your Role / Title</label><input type="text" placeholder="CEO, Principal, CAO, CPO..."></div>
+    <div class="form-group"><label>Number of Campuses</label><select><option value="">Select...</option><option>1 campus</option><option>2–4 campuses</option><option>5–10 campuses</option><option>10+ campuses</option></select></div>
+    <div class="form-group"><label>What brings you to Nexera?</label><select><option value="">Primary interest...</option><option>Leadership Assessment + Development (360°, Hogan, DISC, CliftonStrengths)</option><option>Individual Executive Coaching</option><option>Culture Health Survey (Standalone)</option><option>Board Reporting + Governance Intelligence</option><option>Full Platform — All Services</option></select></div>
+    <div class="form-group"><label>What's your biggest leadership challenge right now?</label><textarea rows="3" placeholder="The more specific, the better — what are you trying to solve?"></textarea></div>
+    <button class="btn btn-primary" style="width:100%;padding:1rem" onclick="submitForm()">Submit Application →</button>
+    <p class="modal-note">No automated responses. A Nexera advisor reviews every inquiry personally.</p>
+  </div>
+</div>
+
+<script>
+// NAV
+function toggleDrop(e, btn){
+  e.preventDefault();
+  var drop = btn.parentElement.querySelector('.nav-drop');
+  if(!drop) return;
+  var isOpen = drop.classList.contains('open');
+  document.querySelectorAll('.nav-drop').forEach(function(d){d.classList.remove('open')});
+  document.querySelectorAll('.has-drop').forEach(function(a){a.classList.remove('active')});
+  if(!isOpen){drop.classList.add('open');btn.classList.add('active');}
+}
+function navGo(e,id){
+  e.preventDefault();
+  document.querySelectorAll('.nav-drop').forEach(function(d){d.classList.remove('open')});
+  var el=document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth'});
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('nav')){
+    document.querySelectorAll('.nav-drop').forEach(function(d){d.classList.remove('open')});
+  }
+});
+
+// MODAL
+function openModal(){document.getElementById('contactModal').classList.add('open');}
+function closeModal(){document.getElementById('contactModal').classList.remove('open');}
+function submitForm(){alert('Thank you — a Nexera advisor will be in touch within 2 business days.');closeModal();}
+
+// PHASE ACCORDION
+function togglePhase(el){
+  var wasOpen=el.classList.contains('open');
+  document.querySelectorAll('.phase-item').forEach(function(p){p.classList.remove('open')});
+  if(!wasOpen) el.classList.add('open');
+}
+
+// DASHBOARD TABS
+function switchDash(id, btn){
+  document.querySelectorAll('.dpanel').forEach(function(p){p.classList.remove('active')});
+  document.querySelectorAll('.dtab').forEach(function(t){t.classList.remove('active')});
+  var p=document.getElementById('dp-'+id);
+  if(p) p.classList.add('active');
+  if(btn) btn.classList.add('active');
+}
+
+// CAMPUS TABS
+var campusData={
+  all:{nps:'+54',domains:[78,67,62,75,79,84,73,81]},
+  A:{nps:'+61',domains:[82,72,68,79,83,88,77,85]},
+  B:{nps:'+48',domains:[74,61,57,70,75,80,68,77]},
+  C:{nps:'+52',domains:[77,67,60,74,78,83,72,80]}
+};
+function setCampus(key, btn){
+  document.querySelectorAll('.ctab').forEach(function(t){t.classList.remove('on')});
+  btn.classList.add('on');
+  var d=campusData[key];
+  document.getElementById('npsScore').textContent=d.nps;
+  var labels=['Outcomes','Belonging','Growth','Leadership','Basic Needs','Purpose','Teamwork','Intent to Return'];
+  var chgs=['+6%','Flat','-3%','+4%','+2%','+5%','+1%','+7%'];
+  var chgClasses=['chg-up','chg-flat','chg-dn','chg-up','chg-up','chg-up','chg-flat','chg-up'];
+  var html='';
+  d.domains.forEach(function(v,i){
+    html+='<div class="dom-item"><div class="dom-val">'+v+'%</div><div class="dom-lbl">'+labels[i]+'</div><div class="dom-chg '+chgClasses[i]+'">'+chgs[i]+'</div></div>';
+  });
+  document.getElementById('npsDomains').innerHTML=html;
+}
+
+// ROI
+function fmt(n){
+  if(n>=1000000) return '$'+Math.round(n/100000)/10+'M';
+  if(n>=1000) return '$'+Math.round(n/1000)+'K';
+  return '$'+n;
+}
+function calcROI(){
+  var leaders=parseInt(document.getElementById('r-leaders').value);
+  var risk=parseInt(document.getElementById('r-risk').value);
+  var renewal=parseInt(document.getElementById('r-renewal').value);
+  var students=parseInt(document.getElementById('r-students').value);
+  document.getElementById('v-leaders').textContent=leaders;
+  document.getElementById('v-risk').textContent=risk;
+  document.getElementById('v-renewal').textContent=renewal+' yr'+(renewal>1?'s':'');
+  document.getElementById('v-students').textContent=students;
+  var retentionVal=risk*22000;
+  var renewalVal=students*(renewal<=2?18:12);
+  document.getElementById('rm-retention').textContent=fmt(retentionVal);
+  document.getElementById('rm-renewal').textContent=fmt(renewalVal);
+  document.getElementById('rm-coached').textContent=leaders+' leaders';
+  var msg='Strong leadership development is your most cost-effective renewal strategy. Nexera builds the accountability infrastructure that protects what you\'ve built.';
+  if(risk>=5) msg='With '+risk+' leaders at retention risk, the cost of unmanaged departures outweighs the cost of a full Nexera engagement — often within the first year.';
+  else if(renewal<=2) msg='With renewal '+renewal+(renewal===1?' year':' years')+' away, every benchmark gap carries real consequences. Nexera gives your board evidence-ready data before the authorizer asks for it.';
+  else if(leaders>=15) msg='A network of '+leaders+' leaders is a significant talent investment. Nexera ensures every one of them is developing, accountable, and aligned to renewal.';
+  document.getElementById('roi-insight-text').textContent=msg;
+}
+calcROI();
+
+// COMPARISON TABLE
+var compareRows=[
+  ['Renewal benchmark mapping (all 10)','✓','–','Partial'],
+  ['Individual KPI goals tied to renewal','✓','–','–'],
+  ['Values embedded in coaching & performance','✓','–','–'],
+  ['Succession Readiness Map','✓','–','–'],
+  ['First 90 Days new leader protocol','✓','–','–'],
+  ['Annual Board Intelligence Report','✓','Partial','✓'],
+  ['Hogan + DISC + CliftonStrengths integrated','✓','Partial','–'],
+  ['Culture survey with values-alignment domains','✓','–','–'],
+  ['AI-automated analysis & coaching narratives','✓','–','–'],
+  ['Built by charter school leaders','✓','–','–'],
+];
+var html='';
+compareRows.forEach(function(r){
+  html+='<div class="compare-row">';
+  html+='<div class="compare-cell feature">'+r[0]+'</div>';
+  [r[1],r[2],r[3]].forEach(function(v){
+    html+='<div class="compare-cell" style="justify-content:center"><span class="'+(v==='✓'?'check-yes':v==='Partial'?'check-partial':'check-no')+'">'+v+'</span></div>';
+  });
+  html+='</div>';
+});
+document.getElementById('compare-rows').innerHTML=html;
+
+// REVEAL
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting) e.target.classList.add('visible');});
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+
+// ANIMATE BARS
+var barObs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.querySelectorAll('[data-width]').forEach(function(b){b.style.width=b.getAttribute('data-width');});
+    }
+  });
+},{threshold:.2});
+document.querySelectorAll('.succ-bar-fill').forEach(function(b){
+  var w=b.style.width;
+  b.setAttribute('data-width',w);
+  b.style.width='0';
+  barObs.observe(b.closest('.succ-card')||b.parentElement);
+});
+</script>
+</body>
+</html>
